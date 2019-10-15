@@ -1,0 +1,64 @@
+import "/util/heal.jass"
+
+function HolyLightConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A000')
+endfunction
+
+function HolyLightActions takes nothing returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local unit target = GetSpellTargetUnit()
+    local location targetLocation = GetUnitLoc(target)
+    local group aoeTargets = GetUnitsInRangeOfLocAll(300.00, targetLocation)
+
+    local integer casterStrength = GetHeroStr(caster, true)
+    local real damageAmount
+    local real healAmount
+
+    local unit picked
+
+    if (IsPlayerEnemy(GetOwningPlayer(caster), GetOwningPlayer(target))) then
+        set damageAmount = R2I(casterStrength * 6)
+        set healAmount = R2I(casterStrength * 4)
+
+        call UnitDamageTargetBJ(caster, target, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+
+        loop
+            set picked = FirstOfGroup(aoeTargets)
+            exitwhen picked == null
+            call GroupRemoveUnit(aoeTargets, picked)
+
+            if (IsPlayerAlly(GetOwningPlayer(picked), GetOwningPlayer(caster))) then
+                call HealUnit(picked, healAmount)
+            endif
+        endloop
+    else
+        set damageAmount = R2I(casterStrength * 3)
+        set healAmount = R2I(casterStrength * 8)
+
+        call HealUnit(target, healAmount)
+
+        loop
+            set picked = FirstOfGroup(aoeTargets)
+            exitwhen picked == null
+            call GroupRemoveUnit(aoeTargets, picked)
+
+            if(IsPlayerEnemy(GetOwningPlayer(picked), GetOwningPlayer(caster)) and not IsUnitDeadBJ(picked)) then
+                call UnitDamageTargetBJ(caster, picked, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+            endif
+        endloop
+    endif
+
+    call DestroyGroup(aoeTargets)
+    set aoeTargets = null
+    call RemoveLocation(targetLocation)
+    set targetLocation = null
+    set caster = null
+    set target = null
+endfunction
+
+function InitHolyLight takes nothing returns nothing
+    local trigger holyLightTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(holyLightTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(holyLightTrigger, Condition( function HolyLightConditions))
+    call TriggerAddAction(holyLightTrigger, function HolyLightActions)
+endfunction

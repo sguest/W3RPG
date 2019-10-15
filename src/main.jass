@@ -1,0 +1,14 @@
+import "/statMod/init.jass"
+import "/heroes/init.jass"
+
+function InitGlobalTables takes nothing returns nothing
+    set udg_ChannelCasters = InitHashtable()
+    set udg_ShieldTable = InitHashtable()
+    set udg_AbilityToggleTable = InitHashtable()
+endfunction
+
+function InitMain takes nothing returns nothing
+    call InitGlobalTables()
+    call InitStatMod()
+    call InitHeroes()
+endfunction

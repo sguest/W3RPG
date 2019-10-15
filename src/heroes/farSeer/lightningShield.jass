@@ -1,0 +1,65 @@
+import "/heroes/farSeer/shields.jass"
+
+function LightningShieldConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A02F')
+endfunction
+
+function LightningShieldActions takes nothing returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local unit target = GetSpellTargetUnit()
+    local integer markerAbility = 'A02G'
+    local group targetGroup
+    local location targetLocation
+    local unit picked
+    local real damageAmount
+    local effect array effects
+    local integer effectIndex = 0
+    local integer counter = 0
+
+    local integer currentIndex = StartShield(caster, target, markerAbility)
+
+    loop
+        exitwhen ShouldRemoveShield(caster, target, currentIndex)
+
+        set counter = 0
+        loop
+            exitwhen counter >= effectIndex
+            call DestroyEffect(effects[counter])
+            set effects[counter] = null
+            set counter = counter + 1
+        endloop
+
+        set damageAmount = GetHeroInt(caster, true) * 0.5
+        set targetLocation = GetUnitLoc(target)
+        set targetGroup = GetUnitsInRangeOfLocAll(160.00, targetLocation)
+
+        loop
+            set picked = FirstOfGroup(targetGroup)
+            exitwhen picked == null
+            call GroupRemoveUnit(targetGroup, picked)
+
+            if(picked != target and IsPlayerEnemy(GetOwningPlayer(picked), GetOwningPlayer(caster)) and not IsUnitDeadBJ(picked)) then
+                set effects[effectIndex] = AddSpecialEffectTarget("Abilities\\Spells\\Orc\\LightningShield\\LightningShieldBuff.mdl", picked, "origin")
+                set effectIndex = effectIndex + 1
+                call UnitDamageTargetBJ(caster, picked, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+            endif
+        endloop
+
+        call RemoveLocation(targetLocation)
+        set targetLocation = null
+        call DestroyGroup(targetGroup)
+        set targetGroup = null
+
+        call PolledWait(1)
+    endloop
+
+    call EndShield(target, markerAbility)
+endfunction
+
+function InitLightningShield takes nothing returns nothing
+    local trigger lightningShieldTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(lightningShieldTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(lightningShieldTrigger, Condition(function LightningShieldConditions))
+    call TriggerAddAction(lightningShieldTrigger, function LightningShieldActions)
+endfunction
+

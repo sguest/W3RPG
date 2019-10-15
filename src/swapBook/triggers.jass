@@ -1,0 +1,41 @@
+function SwapBookConditions takes hashtable table returns boolean
+    local integer abilityId = GetSpellAbilityId()
+    local integer counter = 0
+    local integer numItems = LoadInteger(table, StringHash("NumItems"), 0)
+
+    loop
+        exitwhen counter >= numItems
+
+        if (LoadInteger(table, StringHash("Parent"), counter) == abilityId) then
+            return true
+        endif
+        set counter = counter + 1
+    endloop
+
+    return false
+endfunction
+
+function SwapBookActions takes hashtable table returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local integer abilityId = GetSpellAbilityId()
+    local integer counter = 0
+    local integer numItems = LoadInteger(table, StringHash("NumItems"), 0)
+    local integer selector
+
+    loop
+        exitwhen counter >= numItems
+
+        set selector = LoadInteger(table, StringHash("Parent"), counter)
+        if (selector == abilityId) then
+            call UnitAddAbility(caster, LoadInteger(table, selector, StringHash("SelectorBook")))
+            call UnitAddAbility(caster, LoadInteger(table, selector, StringHash("EffectAbility")))
+        else
+            call UnitRemoveAbility(caster, LoadInteger(table, selector, StringHash("SelectorBook")))
+            call UnitRemoveAbility(caster, LoadInteger(table, selector, StringHash("EffectAbility")))
+        endif
+
+        set counter = counter + 1
+    endloop
+
+    set caster = null
+endfunction

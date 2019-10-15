@@ -1,0 +1,10 @@
+function UnitStunTarget takes unit caster, unit target, integer duration returns nothing
+    local unit stunner = CreateUnit(GetOwningPlayer(caster), 'h000', GetUnitX(target), GetUnitY(target), 0)
+    call UnitAddAbility(stunner, 'A00G')
+    call SetUnitAbilityLevel(stunner, 'A00G', duration)
+    call IssueTargetOrder(stunner, "thunderbolt", target)
+
+    call PolledWait(2)
+    call RemoveUnit(stunner)
+    set stunner = null
+endfunction

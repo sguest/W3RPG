@@ -1,0 +1,26 @@
+import "/statMod/main.jass"
+
+function FeralSpiritConditions takes nothing returns boolean
+    return (GetUnitTypeId(GetSummonedUnit()) == 'o000' )
+endfunction
+
+function FeralSpiritActions takes nothing returns nothing
+    local unit caster = GetSummoningUnit()
+    local unit summoned = GetSummonedUnit()
+    local integer casterStr = GetHeroStr(caster, true)
+    local integer casterAgi = GetHeroAgi(caster, true)
+    local integer casterInt = GetHeroInt(caster, true)
+
+    call SetAttackMod(summoned, R2I(casterInt * 0.8))
+    call SetHealthMod(summoned, casterStr * 20)
+    call SetArmorMod(summoned, R2I(casterAgi * 0.2))
+    call SetHealthRegenMod(summoned, R2I(casterStr * 0.02))
+    call SetAttackSpeedMod(summoned, casterAgi * 2)
+endfunction
+
+function InitFeralSpirit takes nothing returns nothing
+    local trigger feralSpiritTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(feralSpiritTrigger, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerAddCondition(feralSpiritTrigger, Condition( function FeralSpiritConditions))
+    call TriggerAddAction(feralSpiritTrigger, function FeralSpiritActions)
+endfunction

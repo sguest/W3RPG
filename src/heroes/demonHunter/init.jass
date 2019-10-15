@@ -1,0 +1,9 @@
+import "/heroes/demonHunter/manaBurn.jass"
+import "/heroes/demonHunter/immolation.jass"
+import "/heroes/demonHunter/metamorphosis.jass"
+
+function InitDemonHunter takes nothing returns nothing
+    call InitManaBurn()
+    call InitImmolation()
+    call InitMetamorphosis()
+endfunction

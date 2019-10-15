@@ -1,0 +1,3 @@
+function HealUnit takes unit target, real amount returns nothing
+    call SetUnitLifeBJ(target, (GetUnitState(target, UNIT_STATE_LIFE) + amount))
+endfunction

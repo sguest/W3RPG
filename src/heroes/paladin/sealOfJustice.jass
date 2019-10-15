@@ -1,0 +1,27 @@
+import "/util/stun.jass"
+
+function SealOfJusticeConditions takes nothing returns boolean
+    return (GetUnitAbilityLevel(GetAttacker(), 'A00F') == 1)
+endfunction
+
+function SealOfJusticeActions takes nothing returns nothing
+    local unit caster = GetAttacker()
+    local unit target = GetAttackedUnitBJ()
+    local integer casterStrength = GetHeroStr(caster, true)
+
+    if(GetRandomInt(1, 100) <= 25) then
+        call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 2.0, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        call UnitStunTarget(caster, target, 2)
+    endif
+
+    set target = null
+    set caster = null
+endfunction
+
+function InitSealOfJustice takes nothing returns nothing
+    local trigger sealOfJusticeTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(sealOfJusticeTrigger, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(sealOfJusticeTrigger, Condition(function SealOfJusticeConditions))
+    call TriggerAddAction(sealOfJusticeTrigger, function SealOfJusticeActions)
+endfunction
+

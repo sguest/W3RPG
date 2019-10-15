@@ -1,0 +1,96 @@
+function ChainLightningConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A00Y')
+endfunction
+
+function ChainLightningActions takes nothing returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local unit target = GetSpellTargetUnit()
+    local integer casterIntellect = GetHeroInt(caster, true)
+    local real damageAmount = casterIntellect * 5
+    local integer bouncesRemaining = 6
+    local unit lastTarget = caster
+
+    local unit picked
+    local location targetLocation
+    local group targetGroup
+    local lightning array lightnings
+    local integer lightningIndex = 0
+    local effect array effects
+    local integer effectIndex = 0
+    local integer counter
+    local boolean found
+    local real startX
+    local real startY
+    local real targetX
+    local real targetY
+
+    loop
+        exitwhen bouncesRemaining == 0
+        set startX = GetUnitX(lastTarget)
+        set startY = GetUnitY(lastTarget)
+        set targetX = GetUnitX(target)
+        set targetY = GetUnitY(target)
+        set lightnings[lightningIndex] = AddLightning("CLPB", true, startX, startY, targetX, targetY)
+        set lightnings[lightningIndex + 1] = AddLightning("CLSB", true, startX, startY, targetX, targetY)
+        set lightningIndex = lightningIndex + 2
+        set effects[effectIndex] = AddSpecialEffectTarget("Abilities\\Weapons\\Bolt\\BoltImpact.mdl", target, "origin")
+        set effectIndex = effectIndex + 1
+        call UnitDamageTargetBJ(caster, target, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        set targetLocation = GetUnitLoc(target)
+        set targetGroup = GetUnitsInRangeOfLocAll(500.00, targetLocation)
+        set found = false
+
+        loop
+            set picked = GroupPickRandomUnit(targetGroup)
+            exitwhen (found or picked == null)
+
+            if(IsPlayerEnemy(GetOwningPlayer(picked), GetOwningPlayer(caster)) and not IsUnitDeadBJ(picked)) then
+                set found = true
+                set bouncesRemaining = bouncesRemaining - 1
+                set damageAmount = damageAmount * 0.85
+                set lastTarget = target
+                set target = picked
+            endif
+        endloop
+
+        if (not found) then
+            set bouncesRemaining = 0
+        endif
+
+        call DestroyGroup(targetGroup)
+        set targetGroup = null
+        call RemoveLocation(targetLocation)
+        set targetLocation = null
+        set picked = null
+    endloop
+
+    call PolledWait(1)
+
+    set counter = 0
+    loop
+        exitwhen counter >= lightningIndex
+        call DestroyLightning(lightnings[counter])
+        set lightnings[counter] = null
+        set counter = counter + 1
+    endloop
+
+    set counter = 0
+    loop
+        exitwhen counter >= effectIndex
+        call DestroyEffect(effects[counter])
+        set effects[counter] = null
+        set counter = counter + 1
+    endloop
+
+    set caster = null
+    set target = null
+    set lastTarget = null
+endfunction
+
+function InitChainLightning takes nothing returns nothing
+    local trigger chainLightningTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(chainLightningTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(chainLightningTrigger, Condition( function ChainLightningConditions))
+    call TriggerAddAction(chainLightningTrigger, function ChainLightningActions)
+endfunction
+

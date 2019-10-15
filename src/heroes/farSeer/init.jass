@@ -1,0 +1,13 @@
+import "/heroes/farSeer/feralSpirit.jass"
+import "/heroes/farSeer/chainLightning.jass"
+import "/heroes/farSeer/earthquake.jass"
+import "/heroes/farSeer/lightningShield.jass"
+import "/heroes/farSeer/earthShield.jass"
+
+function InitFarSeer takes nothing returns nothing
+    call InitFeralSpirit()
+    call InitChainLightning()
+    call InitEarthquake()
+    call InitLightningShield()
+    call InitEarthShield()
+endfunction

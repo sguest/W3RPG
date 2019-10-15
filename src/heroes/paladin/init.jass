@@ -1,0 +1,15 @@
+import "/heroes/paladin/sealOfRighteousness.jass"
+import "/heroes/paladin/sealOfJustice.jass"
+import "/heroes/paladin/sealSelection.jass"
+import "/heroes/paladin/auraSelection.jass"
+import "/heroes/paladin/holyLight.jass"
+import "/heroes/paladin/judgment.jass"
+
+function InitPaladin takes nothing returns nothing
+    call InitSealOfRighteousness()
+    call InitSealOfJustice()
+    call InitSealSelection()
+    call InitAuraSelection()
+    call InitHolyLight()
+    call InitJudgment()
+endfunction

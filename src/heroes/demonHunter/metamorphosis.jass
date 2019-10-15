@@ -1,0 +1,35 @@
+import "/statMod/main.jass"
+
+function MetamorphosisConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A02M')
+endfunction
+
+function MetamorphosisActions takes nothing returns nothing
+    local real duration = 60
+    local real transformTime = 1.5
+
+    local unit caster = GetSpellAbilityUnit()
+    local integer casterAgi = GetHeroAgi(caster, true)
+    local integer attackAmount = R2I(casterAgi * 0.75)
+    local integer healthAmount = casterAgi * 20
+
+    call PolledWait(transformTime)
+
+    if (UnitHasBuffBJ(caster, 'BEme')) then
+        call SetStatMod(caster, "attack", attackAmount)
+        call SetStatMod(caster, "health", healthAmount)
+
+        call PolledWait(duration)
+
+        call SetStatMod(caster, "attack", -attackAmount)
+        call SetStatMod(caster, "health", -healthAmount)
+    endif
+endfunction
+
+function InitMetamorphosis takes nothing returns nothing
+    local trigger metamorphosisTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(metamorphosisTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(metamorphosisTrigger, Condition( function MetamorphosisConditions))
+    call TriggerAddAction(metamorphosisTrigger, function MetamorphosisActions)
+endfunction
+

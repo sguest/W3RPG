@@ -1,0 +1,74 @@
+function ImmolationConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A02L')
+endfunction
+
+function ImmolationActions takes nothing returns nothing
+    local real damageAmount
+    local location targetLocation
+    local group targetGroup
+    local unit picked
+    local unit caster = GetSpellAbilityUnit()
+    local effect array effects
+    local integer effectIndex = 0
+    local integer counter = 0
+    local integer immolationHash = StringHash("Immolation")
+    local integer casterHandle = GetHandleId(caster)
+
+    if(LoadBoolean(udg_AbilityToggleTable, casterHandle, immolationHash) == false) then
+        call SaveBoolean(udg_AbilityToggleTable, casterHandle, immolationHash, true)
+        //Need to wait or buff won't be applied yet and immolation will immediately end
+        call PolledWait(1)
+
+        loop
+            exitwhen (UnitHasBuffBJ(caster, 'BEim') == false)
+
+            set counter = 0
+            loop
+                exitwhen counter >= effectIndex
+                call DestroyEffect(effects[counter])
+                set effects[counter] = null
+                set counter = counter + 1
+            endloop
+
+            set damageAmount = GetHeroAgi(caster, true) * 0.5
+            set targetLocation = GetUnitLoc(caster)
+            set targetGroup = GetUnitsInRangeOfLocAll(160.00, targetLocation)
+
+            loop
+                set picked = FirstOfGroup(targetGroup)
+                exitwhen picked == null
+                call GroupRemoveUnit(targetGroup, picked)
+
+                if(IsPlayerEnemy(GetOwningPlayer(picked), GetOwningPlayer(caster)) and not IsUnitDeadBJ(picked)) then
+                    set effects[effectIndex] = AddSpecialEffectTarget("Abilities\\Spells\\NightElf\\Immolation\\ImmolationDamage.mdl", picked, "origin")
+                    set effectIndex = effectIndex + 1
+                    call UnitDamageTargetBJ(caster, picked, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+                endif
+            endloop
+
+            call RemoveLocation(targetLocation)
+            set targetLocation = null
+            call DestroyGroup(targetGroup)
+            set targetGroup = null
+
+            call PolledWait(1)
+        endloop
+
+        call SaveBoolean(udg_AbilityToggleTable, casterHandle, immolationHash, false)
+        set counter = 0
+        loop
+            exitwhen counter >= effectIndex
+            call DestroyEffect(effects[counter])
+            set effects[counter] = null
+            set counter = counter + 1
+        endloop
+    endif
+endfunction
+
+function InitImmolation takes nothing returns nothing
+    local trigger immolationTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(immolationTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(immolationTrigger, Condition( function ImmolationConditions))
+    call TriggerAddAction(immolationTrigger, function ImmolationActions)
+endfunction
+

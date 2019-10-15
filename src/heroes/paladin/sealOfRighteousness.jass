@@ -1,0 +1,22 @@
+function SealOfRighteousnessConditions takes nothing returns boolean
+    return (GetUnitAbilityLevel(GetAttacker(), 'A008') == 1)
+endfunction
+
+function SealOfRighteousnessActions takes nothing returns nothing
+    local unit caster = GetAttacker()
+    local unit target = GetAttackedUnitBJ()
+    local integer casterStrength = GetHeroStr(caster, true)
+
+    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 1.5, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+
+    set target = null
+    set caster = null
+endfunction
+
+function InitSealOfRighteousness takes nothing returns nothing
+    local trigger sealOfRighteousnessTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(sealOfRighteousnessTrigger, EVENT_PLAYER_UNIT_ATTACKED)
+    call TriggerAddCondition(sealOfRighteousnessTrigger, Condition(function SealOfRighteousnessConditions))
+    call TriggerAddAction(sealOfRighteousnessTrigger, function SealOfRighteousnessActions)
+endfunction
+

@@ -1,0 +1,65 @@
+import "/util/stun.jass"
+import "/util/heal.jass"
+
+function JudgmentConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A00H')
+endfunction
+
+function JudgmentActions takes nothing returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local unit target = GetSpellTargetUnit()
+    local location casterLocation = GetUnitLoc(caster)
+    local location targetLocation = GetUnitLoc(target)
+    local real distance = DistanceBetweenPoints(casterLocation, targetLocation)
+    local group aoeTargets
+    local unit picked
+    local integer casterStrength = GetHeroStr(caster, true)
+
+    call PolledWait(distance / 1000)
+
+    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+
+    //Seal of Righteousness
+    if(GetUnitAbilityLevel(caster, 'A008') == 1) then
+        call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+
+    //Seal of Vengeance
+    elseif(GetUnitAbilityLevel(caster, 'A006') == 1) then
+        set aoeTargets = GetUnitsInRangeOfLocAll(300.00, targetLocation)
+
+        loop
+            set picked = FirstOfGroup(aoeTargets)
+            exitwhen picked == null
+            call GroupRemoveUnit(aoeTargets, picked)
+
+            if(picked != target and IsPlayerEnemy(GetOwningPlayer(caster), GetOwningPlayer(picked)) and not IsUnitDeadBJ(picked)) then
+                call UnitDamageTargetBJ(caster, picked, I2R(casterStrength) * 1.5, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+            endif
+        endloop
+
+        call DestroyGroup(aoeTargets)
+        set aoeTargets = null
+    //Seal of Light
+    elseif(GetUnitAbilityLevel(caster, 'A009') == 1) then
+        call HealUnit(caster, I2R(casterStrength) * 3)
+
+    //Seal of Justice
+    elseif(GetUnitAbilityLevel(caster, 'A00F') == 1) then
+        call UnitStunTarget(caster, target, 4)
+    endif
+
+    call RemoveLocation(casterLocation)
+    set casterLocation = null
+    call RemoveLocation(targetLocation)
+    set targetLocation = null
+    set caster = null
+    set target = null
+endfunction
+
+function InitJudgment takes nothing returns nothing
+    local trigger judgmentTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(judgmentTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerAddCondition(judgmentTrigger, Condition( function JudgmentConditions))
+    call TriggerAddAction(judgmentTrigger, function JudgmentActions)
+endfunction
+

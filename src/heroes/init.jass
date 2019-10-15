@@ -1,0 +1,9 @@
+import "/heroes/paladin/init.jass"
+import "/heroes/farSeer/init.jass"
+import "/heroes/demonHunter/init.jass"
+
+function InitHeroes takes nothing returns nothing
+    call InitPaladin()
+    call InitFarSeer()
+    call InitDemonHunter()
+endfunction

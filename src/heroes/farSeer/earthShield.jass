@@ -1,0 +1,66 @@
+import "/heroes/farSeer/shields.jass"
+import "/util/heal.jass"
+
+function EarthShieldAttackedActions takes nothing returns nothing
+    local integer triggerHandle = GetHandleId(GetTriggeringTrigger())
+    local integer lastActivationHash = StringHash("LastActivation")
+    local integer lastActivation = LoadInteger(udg_ShieldTable, triggerHandle, lastActivationHash)
+    local effect healEffect
+
+    if(udg_ElapsedSeconds - lastActivation >= 6) then
+        call HealUnit(GetAttackedUnitBJ(), LoadReal(udg_ShieldTable, triggerHandle, StringHash("HealAmount")))
+        call SaveInteger(udg_ShieldTable, triggerHandle, lastActivationHash, udg_ElapsedSeconds)
+        set healEffect = AddSpecialEffectTarget("Abilities\\Spells\\NightElf\\Rejuvenation\\RejuvenationTarget.mdl", GetAttackedUnitBJ(), "origin")
+
+        call PolledWait(4)
+        call DestroyEffect(healEffect)
+        set healEffect = null
+    endif
+endfunction
+
+function EarthShieldConditions takes nothing returns boolean
+    return (GetSpellAbilityId() == 'A02H')
+endfunction
+
+function EarthShieldActions takes nothing returns nothing
+    local unit caster = GetSpellAbilityUnit()
+    local unit target = GetSpellTargetUnit()
+    local integer markerAbility = 'A02J'
+    local group targetGroup
+    local location targetLocation
+    local unit picked
+    local real damageAmount
+    local effect array effects
+    local integer effectIndex = 0
+    local integer counter = 0
+    local integer armorAmount = R2I(GetHeroInt(caster, true) * 0.1)
+    local integer currentIndex = StartShield(caster, target, markerAbility)
+
+    local trigger attackedTrigger = CreateTrigger()
+    local triggeraction attackedTriggerAction = TriggerAddAction(attackedTrigger, function EarthShieldAttackedActions)
+    call TriggerRegisterUnitEvent(attackedTrigger, target, EVENT_UNIT_ATTACKED)
+    call SaveReal(udg_ShieldTable, GetHandleId(attackedTrigger), StringHash("HealAmount"), GetHeroInt(caster, true) * 2.0)
+
+    call SetArmorMod(target, armorAmount)
+
+    loop
+        exitwhen ShouldRemoveShield(caster, target, currentIndex)
+
+        call PolledWait(1)
+    endloop
+
+    call SetArmorMod(target, -armorAmount)
+    call EndShield(target, markerAbility)
+
+    call TriggerRemoveAction(attackedTrigger, attackedTriggerAction)
+    call DestroyTrigger(attackedTrigger)
+endfunction
+
+//===========================================================================
+function InitEarthShield takes nothing returns nothing
+    local trigger earthShieldTrigger = CreateTrigger()
+    call TriggerRegisterAnyUnitEventBJ(earthShieldTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerAddCondition(earthShieldTrigger, Condition(function EarthShieldConditions))
+    call TriggerAddAction(earthShieldTrigger, function EarthShieldActions)
+endfunction
+
