@@ -7,3 +7,39 @@ function InitHeroes takes nothing returns nothing
     call InitFarSeer()
     call InitDemonHunter()
 endfunction
+
+function HeroSoldActions takes nothing returns nothing
+    local unit buyer = GetBuyingUnit()
+    local unit hero = GetSoldUnit()
+    local location targetLocation = GetRectCenter(gg_rct_HeroSpawn)
+
+    call RemoveUnit(buyer)
+    call SetUnitPositionLoc(hero, targetLocation)
+    call PanCameraToTimedLocForPlayer(GetOwningPlayer(hero), targetLocation, 0)
+
+    call RemoveLocation(targetLocation)
+    set targetLocation = null
+    set buyer = null
+    set hero = null
+endfunction
+
+function InitHeroSelectionPlayer takes nothing returns nothing
+    local player picked = GetEnumPlayer()
+    local location spawnLocation = GetRectCenter(gg_rct_HeroSelection)
+
+    call CreateUnitAtLoc(picked, 'h001', spawnLocation, 270)
+    call RemoveLocation(spawnLocation)
+    set spawnLocation = null
+    set picked = null
+endfunction
+
+function InitHeroSelection takes nothing returns nothing
+    local trigger heroSoldTrigger = CreateTrigger()
+    call TriggerRegisterUnitEvent(heroSoldTrigger, gg_unit_halt_0213, EVENT_UNIT_SELL)
+    call TriggerRegisterUnitEvent(heroSoldTrigger, gg_unit_oalt_0001, EVENT_UNIT_SELL)
+    call TriggerRegisterUnitEvent(heroSoldTrigger, gg_unit_uaod_0216, EVENT_UNIT_SELL)
+    call TriggerRegisterUnitEvent(heroSoldTrigger, gg_unit_eate_0217, EVENT_UNIT_SELL)
+    call TriggerAddAction(heroSoldTrigger, function HeroSoldActions)
+
+    call ForForce(GetPlayersAll(), function InitHeroSelectionPlayer)
+endfunction
