@@ -56,9 +56,9 @@ function JudgmentActions takes nothing returns nothing
     set target = null
 endfunction
 
-function InitJudgment takes nothing returns nothing
+function InitJudgment takes unit hero returns nothing
     local trigger judgmentTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(judgmentTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(judgmentTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(judgmentTrigger, Condition( function JudgmentConditions))
     call TriggerAddAction(judgmentTrigger, function JudgmentActions)
 endfunction

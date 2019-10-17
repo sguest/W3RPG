@@ -56,9 +56,9 @@ function HolyLightActions takes nothing returns nothing
     set target = null
 endfunction
 
-function InitHolyLight takes nothing returns nothing
+function InitHolyLight takes unit hero returns nothing
     local trigger holyLightTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(holyLightTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(holyLightTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(holyLightTrigger, Condition( function HolyLightConditions))
     call TriggerAddAction(holyLightTrigger, function HolyLightActions)
 endfunction

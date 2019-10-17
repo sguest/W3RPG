@@ -2,10 +2,16 @@ import "/heroes/paladin/init.jass"
 import "/heroes/farSeer/init.jass"
 import "/heroes/demonHunter/init.jass"
 
-function InitHeroes takes nothing returns nothing
-    call InitPaladin()
-    call InitFarSeer()
-    call InitDemonHunter()
+function InitHero takes unit hero returns nothing
+    local integer unitType = GetUnitTypeId(hero)
+
+    if (unitType == 'Hpal') then
+        call InitPaladin(hero)
+    elseif(unitType == 'Ofar') then
+        call InitFarSeer(hero)
+    elseif(unitType == 'Edem') then
+        call InitDemonHunter(hero)
+    endif
 endfunction
 
 function HeroSoldActions takes nothing returns nothing
@@ -16,6 +22,8 @@ function HeroSoldActions takes nothing returns nothing
     call RemoveUnit(buyer)
     call SetUnitPositionLoc(hero, targetLocation)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(hero), targetLocation, 0)
+
+    call InitHero(hero)
 
     call RemoveLocation(targetLocation)
     set targetLocation = null

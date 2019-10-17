@@ -56,11 +56,11 @@ function EarthquakeEndActions takes nothing returns nothing
     call SaveInteger(udg_ChannelCasters, earthquakeHash, handleId, currentIndex + 1)
 endfunction
 
-function InitEarthquake takes nothing returns nothing
+function InitEarthquake takes unit hero returns nothing
     local trigger earthquakeStartTrigger = CreateTrigger()
     local trigger earthquakeEndTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(earthquakeStartTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
-    call TriggerRegisterAnyUnitEventBJ(earthquakeEndTrigger, EVENT_PLAYER_UNIT_SPELL_ENDCAST)
+    call TriggerRegisterUnitEvent(earthquakeStartTrigger, hero, EVENT_UNIT_SPELL_CHANNEL)
+    call TriggerRegisterUnitEvent(earthquakeEndTrigger, hero, EVENT_UNIT_SPELL_ENDCAST)
     call TriggerAddCondition(earthquakeStartTrigger, Condition(function EarthquakeConditions))
     call TriggerAddCondition(earthquakeEndTrigger, Condition(function EarthquakeConditions))
     call TriggerAddAction(earthquakeStartTrigger, function EarthquakeStartActions)

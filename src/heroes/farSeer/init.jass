@@ -4,10 +4,10 @@ import "/heroes/farSeer/earthquake.jass"
 import "/heroes/farSeer/lightningShield.jass"
 import "/heroes/farSeer/earthShield.jass"
 
-function InitFarSeer takes nothing returns nothing
-    call InitFeralSpirit()
-    call InitChainLightning()
-    call InitEarthquake()
-    call InitLightningShield()
-    call InitEarthShield()
+function InitFarSeer takes unit hero returns nothing
+    call InitFeralSpirit(hero)
+    call InitChainLightning(hero)
+    call InitEarthquake(hero)
+    call InitLightningShield(hero)
+    call InitEarthShield(hero)
 endfunction

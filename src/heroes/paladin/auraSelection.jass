@@ -22,11 +22,11 @@ function AuraSelectionActions takes nothing returns nothing
     call SwapBookActions(udg_AuraBooks)
 endfunction
 
-function InitAuraSelection takes nothing returns nothing
+function InitAuraSelection takes unit hero returns nothing
     local trigger auraSelectionTrigger = CreateTrigger()
     call initAuraTable()
 
-    call TriggerRegisterAnyUnitEventBJ(auraSelectionTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(auraSelectionTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(auraSelectionTrigger, Condition(function selectAuraConditions))
     call TriggerAddAction(auraSelectionTrigger, function AuraSelectionActions)
 endfunction

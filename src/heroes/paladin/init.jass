@@ -5,11 +5,11 @@ import "/heroes/paladin/auraSelection.jass"
 import "/heroes/paladin/holyLight.jass"
 import "/heroes/paladin/judgment.jass"
 
-function InitPaladin takes nothing returns nothing
+function InitPaladin takes unit hero returns nothing
     call InitSealOfRighteousness()
     call InitSealOfJustice()
-    call InitSealSelection()
-    call InitAuraSelection()
-    call InitHolyLight()
-    call InitJudgment()
+    call InitSealSelection(hero)
+    call InitAuraSelection(hero)
+    call InitHolyLight(hero)
+    call InitJudgment(hero)
 endfunction

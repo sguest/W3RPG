@@ -87,9 +87,9 @@ function ChainLightningActions takes nothing returns nothing
     set lastTarget = null
 endfunction
 
-function InitChainLightning takes nothing returns nothing
+function InitChainLightning takes unit hero returns nothing
     local trigger chainLightningTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(chainLightningTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(chainLightningTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(chainLightningTrigger, Condition( function ChainLightningConditions))
     call TriggerAddAction(chainLightningTrigger, function ChainLightningActions)
 endfunction

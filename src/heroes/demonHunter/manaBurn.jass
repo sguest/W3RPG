@@ -31,9 +31,9 @@ function ManaBurnActions takes nothing returns nothing
     set target = null
 endfunction
 
-function InitManaBurn takes nothing returns nothing
+function InitManaBurn takes unit hero returns nothing
     local trigger manaBurnTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(manaBurnTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(manaBurnTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(manaBurnTrigger, Condition(function ManaBurnConditions))
     call TriggerAddAction(manaBurnTrigger, function ManaBurnActions)
 endfunction

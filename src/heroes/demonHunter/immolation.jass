@@ -65,9 +65,9 @@ function ImmolationActions takes nothing returns nothing
     endif
 endfunction
 
-function InitImmolation takes nothing returns nothing
+function InitImmolation takes unit hero returns nothing
     local trigger immolationTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(immolationTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(immolationTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(immolationTrigger, Condition( function ImmolationConditions))
     call TriggerAddAction(immolationTrigger, function ImmolationActions)
 endfunction

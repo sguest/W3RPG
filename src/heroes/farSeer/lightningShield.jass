@@ -56,9 +56,9 @@ function LightningShieldActions takes nothing returns nothing
     call EndShield(target, markerAbility)
 endfunction
 
-function InitLightningShield takes nothing returns nothing
+function InitLightningShield takes unit hero returns nothing
     local trigger lightningShieldTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(lightningShieldTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerRegisterUnitEvent(lightningShieldTrigger, hero, EVENT_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(lightningShieldTrigger, Condition(function LightningShieldConditions))
     call TriggerAddAction(lightningShieldTrigger, function LightningShieldActions)
 endfunction

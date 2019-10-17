@@ -26,9 +26,9 @@ function MetamorphosisActions takes nothing returns nothing
     endif
 endfunction
 
-function InitMetamorphosis takes nothing returns nothing
+function InitMetamorphosis takes unit hero returns nothing
     local trigger metamorphosisTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(metamorphosisTrigger, EVENT_PLAYER_UNIT_SPELL_EFFECT)
+    call TriggerRegisterUnitEvent(metamorphosisTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(metamorphosisTrigger, Condition( function MetamorphosisConditions))
     call TriggerAddAction(metamorphosisTrigger, function MetamorphosisActions)
 endfunction

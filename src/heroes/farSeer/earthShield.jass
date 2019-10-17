@@ -57,9 +57,9 @@ function EarthShieldActions takes nothing returns nothing
 endfunction
 
 //===========================================================================
-function InitEarthShield takes nothing returns nothing
+function InitEarthShield takes unit hero returns nothing
     local trigger earthShieldTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(earthShieldTrigger, EVENT_PLAYER_UNIT_SPELL_CHANNEL)
+    call TriggerRegisterUnitEvent(earthShieldTrigger, hero, EVENT_UNIT_SPELL_CHANNEL)
     call TriggerAddCondition(earthShieldTrigger, Condition(function EarthShieldConditions))
     call TriggerAddAction(earthShieldTrigger, function EarthShieldActions)
 endfunction

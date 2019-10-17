@@ -18,9 +18,9 @@ function FeralSpiritActions takes nothing returns nothing
     call SetAttackSpeedMod(summoned, casterAgi * 2)
 endfunction
 
-function InitFeralSpirit takes nothing returns nothing
+function InitFeralSpirit takes unit hero returns nothing
     local trigger feralSpiritTrigger = CreateTrigger()
-    call TriggerRegisterAnyUnitEventBJ(feralSpiritTrigger, EVENT_PLAYER_UNIT_SUMMON)
+    call TriggerRegisterUnitEvent(feralSpiritTrigger, hero, EVENT_UNIT_SUMMON)
     call TriggerAddCondition(feralSpiritTrigger, Condition( function FeralSpiritConditions))
     call TriggerAddAction(feralSpiritTrigger, function FeralSpiritActions)
 endfunction
