@@ -14,6 +14,7 @@ function JudgmentActions takes nothing returns nothing
     local group aoeTargets
     local unit picked
     local integer casterStrength = GetHeroStr(caster, true)
+    local effect visualEffect
 
     call PolledWait(distance / 1000)
 
@@ -37,17 +38,23 @@ function JudgmentActions takes nothing returns nothing
             endif
         endloop
 
+        set visualEffect = AddSpecialEffectTarget("Abilities\\Spells\\Undead\\ReplenishHealth\\ReplenishHealthCaster.mdl", target, "overhead")
+
         call DestroyGroup(aoeTargets)
         set aoeTargets = null
     //Seal of Light
     elseif(GetUnitAbilityLevel(caster, 'A009') == 1) then
         call HealUnit(caster, I2R(casterStrength) * 3)
-
+        set visualEffect = AddSpecialEffectTarget("Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl", caster, "origin")
     //Seal of Justice
     elseif(GetUnitAbilityLevel(caster, 'A00F') == 1) then
         call UnitStunTarget(caster, target, 4)
     endif
 
+    call PolledWait(1)
+
+    call DestroyEffect(visualEffect)
+    set visualEffect = null
     call RemoveLocation(casterLocation)
     set casterLocation = null
     call RemoveLocation(targetLocation)
