@@ -1,9 +1,21 @@
 import "/heroes/paladin/init.jass"
 import "/heroes/farSeer/init.jass"
 import "/heroes/demonHunter/init.jass"
+import "/heroes/levelStats.jass"
+
+function HeroLevelActions takes nothing returns nothing
+    call ApplyLevelStats(GetLevelingUnit())
+endfunction
+
+function CreateHeroLevelTrigger takes unit hero returns nothing
+    local trigger levelTrigger = CreateTrigger()
+    call TriggerRegisterUnitEvent(levelTrigger, hero, EVENT_UNIT_HERO_LEVEL)
+    call TriggerAddAction(levelTrigger, function HeroLevelActions)
+endfunction
 
 function InitHero takes unit hero returns nothing
     local integer unitType = GetUnitTypeId(hero)
+    call CreateHeroLevelTrigger(hero)
 
     if (unitType == 'Hpal') then
         call InitPaladin(hero)

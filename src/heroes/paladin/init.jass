@@ -4,10 +4,30 @@ import "/heroes/paladin/sealSelection.jass"
 import "/heroes/paladin/auraSelection.jass"
 import "/heroes/paladin/holyLight.jass"
 import "/heroes/paladin/judgment.jass"
+import "/heroes/levelStats.jass"
+import "/swapBook/init.jass"
+
+function InitSealTable takes nothing returns nothing
+    set udg_SealBooks = InitHashtable()
+    call InitSwapBookTable(udg_SealBooks)
+    //Seal of Righteousness
+    call InitSwapBook(udg_SealBooks, 'A003', 'A002', 'A008')
+    //Seal of Vengeance
+    call InitSwapBook(udg_SealBooks, 'A005', 'A004', 'A007')
+    //Seal of Light
+    call InitSwapBook(udg_SealBooks, 'A00A', 'A00B', 'A00C')
+    //Seal of Justice
+    call InitSwapBook(udg_SealBooks, 'A00D', 'A00E', 'A00F')
+endfunction
 
 function InitPaladin takes unit hero returns nothing
-    call InitSealOfRighteousness()
-    call InitSealOfJustice()
+    if(udg_SealBooks == null) then
+        call InitSealTable()
+        call InitSealOfRighteousness()
+        call InitSealOfJustice()
+    endif
+
+    call InitLevelStats('Hpal', 67.5, 0.135, 3, 0.45, 27, 9)
     call InitSealSelection(hero)
     call InitAuraSelection(hero)
     call InitHolyLight(hero)

@@ -1,0 +1,38 @@
+import "/statMod/main.jass"
+
+//1 agi = 0.02 attack speed (specified in 1 = 1% = 0.01 attack speed value)
+//1 agi = 0.30 armor (-2 base)
+//1 str = 25 hp
+//1 str = 0.05 regen
+//1 int = 15 mana
+//1 int = 0.05 mana regen
+function InitLevelStats takes integer unitType, real health, real healthRegen, real attackSpeed, real armor, real mana, real manaRegen returns nothing
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("health"), health)
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("healthRegen"), healthRegen)
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("attackSpeed"), attackSpeed)
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("armor"), armor)
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("mana"), mana)
+    call SaveReal(udg_HeroLevelStats, unitType, StringHash("manaRegen"), manaRegen)
+endfunction
+
+function ApplyLevelStat takes unit hero, string statName returns nothing
+    local integer level = GetHeroLevel(hero)
+    local integer unitType = GetUnitTypeId(hero)
+    local integer unitHandle = GetHandleId(hero)
+    local integer nameHash = StringHash(statName)
+    local integer currentValue = LoadInteger(udg_HeroLevelStats, unitHandle, nameHash)
+    local real levelValue = LoadReal(udg_HeroLevelStats, unitType, nameHash)
+    local integer targetValue = R2I((level - 1) * levelValue)
+    local integer delta = targetValue - currentValue
+    call SetStatMod(hero, statName, delta)
+    call SaveInteger(udg_HeroLevelStats, unitHandle, nameHash, targetValue)
+endfunction
+
+function ApplyLevelStats takes unit hero returns nothing
+    call ApplyLevelStat(hero, "health")
+    call ApplyLevelStat(hero, "healthRegen")
+    call ApplyLevelStat(hero, "attackSpeed")
+    call ApplyLevelStat(hero, "armor")
+    call ApplyLevelStat(hero, "mana")
+    call ApplyLevelStat(hero, "manaRegen")
+endfunction

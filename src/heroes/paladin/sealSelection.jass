@@ -1,18 +1,4 @@
-import "/swapBook/init.jass"
 import "/swapBook/triggers.jass"
-
-function initSealTable takes nothing returns nothing
-    set udg_SealBooks = InitHashtable()
-    call InitSwapBookTable(udg_SealBooks)
-    //Seal of Righteousness
-    call InitSwapBook(udg_SealBooks, 'A003', 'A002', 'A008')
-    //Seal of Vengeance
-    call InitSwapBook(udg_SealBooks, 'A005', 'A004', 'A007')
-    //Seal of Light
-    call InitSwapBook(udg_SealBooks, 'A00A', 'A00B', 'A00C')
-    //Seal of Justice
-    call InitSwapBook(udg_SealBooks, 'A00D', 'A00E', 'A00F')
-endfunction
 
 function selectSealConditions takes nothing returns boolean
     return SwapBookConditions(udg_SealBooks)
@@ -24,8 +10,6 @@ endfunction
 
 function InitSealSelection takes unit hero returns nothing
     local trigger sealSelectionTrigger = CreateTrigger()
-
-    call initSealTable()
 
     call TriggerRegisterUnitEvent(sealSelectionTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(sealSelectionTrigger, Condition(function selectSealConditions))

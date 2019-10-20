@@ -5,6 +5,7 @@ import "/heroes/farSeer/lightningShield.jass"
 import "/heroes/farSeer/earthShield.jass"
 
 function InitFarSeer takes unit hero returns nothing
+    call InitLevelStats('Ofar', 50, 0.1, 2, 0.35, 45, 15)
     call InitFeralSpirit(hero)
     call InitChainLightning(hero)
     call InitEarthquake(hero)

@@ -5,6 +5,7 @@ function InitGlobalTables takes nothing returns nothing
     set udg_ChannelCasters = InitHashtable()
     set udg_ShieldTable = InitHashtable()
     set udg_AbilityToggleTable = InitHashtable()
+    set udg_HeroLevelStats = InitHashtable()
 endfunction
 
 function InitMain takes nothing returns nothing

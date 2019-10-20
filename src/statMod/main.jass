@@ -54,3 +54,11 @@ endfunction
 function SetAttackSpeedMod takes unit target, integer delta returns integer
     return SetStatMod(target, "attackSpeed", delta)
 endfunction
+
+function SetManaMod takes unit target, integer delta returns integer
+    return SetStatMod(target, "mana", delta)
+endfunction
+
+function SetManaRegenMod takes unit target, integer delta returns integer
+    return SetStatMod(target, "manaRegen", delta)
+endfunction
