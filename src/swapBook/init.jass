@@ -2,11 +2,12 @@ function InitSwapBookTable takes hashtable table returns nothing
     call SaveInteger(table, StringHash("NumItems"), 0, 0)
 endfunction
 
-function InitSwapBook takes hashtable table, integer selector, integer selectorBook, integer effectAbility returns nothing
+function InitSwapBook takes hashtable table, integer selector, integer selectorBook, integer addedAbility, integer effectAbility returns nothing
     local integer count = LoadInteger(table, StringHash("NumItems"), 0)
     call SaveInteger(table, StringHash("Parent"), count, selector)
     set count = count + 1
     call SaveInteger(table, StringHash("NumItems"), 0, count)
     call SaveInteger(table, selector, StringHash("SelectorBook"), selectorBook)
+    call SaveInteger(table, selector, StringHash("AddedAbility"), addedAbility)
     call SaveInteger(table, selector, StringHash("EffectAbility"), effectAbility)
 endfunction

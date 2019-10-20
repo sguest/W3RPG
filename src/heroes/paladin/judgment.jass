@@ -15,17 +15,18 @@ function JudgmentActions takes nothing returns nothing
     local unit picked
     local integer casterStrength = GetHeroStr(caster, true)
     local effect visualEffect
+    local integer sealLevel
 
     call PolledWait(distance / 1000)
 
     call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
     //Seal of Righteousness
-    if(GetUnitAbilityLevel(caster, 'A008') == 1) then
+    if(GetUnitAbilityLevel(caster, 'A008') > 0) then
         call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
     //Seal of Vengeance
-    elseif(GetUnitAbilityLevel(caster, 'A006') == 1) then
+    elseif(GetUnitAbilityLevel(caster, 'A006') > 0) then
         set aoeTargets = GetUnitsInRangeOfLocAll(300.00, targetLocation)
 
         loop
@@ -43,11 +44,12 @@ function JudgmentActions takes nothing returns nothing
         call DestroyGroup(aoeTargets)
         set aoeTargets = null
     //Seal of Light
-    elseif(GetUnitAbilityLevel(caster, 'A009') == 1) then
-        call HealUnit(caster, I2R(casterStrength) * 3)
+    elseif(GetUnitAbilityLevel(caster, 'A009') > 0) then
+        set sealLevel = GetUnitAbilityLevel(caster, 'A009')
+        call HealUnit(caster, I2R(casterStrength) * (1 + sealLevel))
         set visualEffect = AddSpecialEffectTarget("Abilities\\Spells\\Undead\\VampiricAura\\VampiricAuraTarget.mdl", caster, "origin")
     //Seal of Justice
-    elseif(GetUnitAbilityLevel(caster, 'A00F') == 1) then
+    elseif(GetUnitAbilityLevel(caster, 'A00F') > 0) then
         call UnitStunTarget(caster, target, 4)
     endif
 

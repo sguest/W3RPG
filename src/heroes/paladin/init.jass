@@ -11,18 +11,32 @@ function InitSealTable takes nothing returns nothing
     set udg_SealBooks = InitHashtable()
     call InitSwapBookTable(udg_SealBooks)
     //Seal of Righteousness
-    call InitSwapBook(udg_SealBooks, 'A003', 'A002', 'A008')
+    call InitSwapBook(udg_SealBooks, 'A003', 'A002', 'A008', 0)
     //Seal of Vengeance
-    call InitSwapBook(udg_SealBooks, 'A005', 'A004', 'A007')
+    call InitSwapBook(udg_SealBooks, 'A005', 'A004', 'A007', 'A006')
     //Seal of Light
-    call InitSwapBook(udg_SealBooks, 'A00A', 'A00B', 'A00C')
+    call InitSwapBook(udg_SealBooks, 'A00A', 'A00B', 'A00C', 'A009')
     //Seal of Justice
-    call InitSwapBook(udg_SealBooks, 'A00D', 'A00E', 'A00F')
+    call InitSwapBook(udg_SealBooks, 'A00D', 'A00E', 'A00F', 0)
+endfunction
+
+function InitAuraTable takes nothing returns nothing
+    set udg_AuraBooks = InitHashtable()
+    call InitSwapBookTable(udg_AuraBooks)
+    //Devotion Aura
+    call InitSwapBook(udg_AuraBooks, 'A00J', 'A00I', 'A00K', 'A00L')
+    //Retribution Aura
+    call InitSwapBook(udg_AuraBooks, 'A00O', 'A00P', 'A00N', 'A00M')
+    //Sanctity Aura
+    call InitSwapBook(udg_AuraBooks, 'A00S', 'A00T', 'A00R', 'A00Q')
+    //Aura of Mercy
+    call InitSwapBook(udg_AuraBooks, 'A00W', 'A00X', 'A00V', 'A00U')
 endfunction
 
 function InitPaladin takes unit hero returns nothing
     if(udg_SealBooks == null) then
         call InitSealTable()
+        call InitAuraTable()
         call InitSealOfRighteousness()
         call InitSealOfJustice()
     endif

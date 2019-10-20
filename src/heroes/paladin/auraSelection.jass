@@ -1,18 +1,4 @@
-import "/swapBook/init.jass"
 import "/swapBook/triggers.jass"
-
-function initAuraTable takes nothing returns nothing
-    set udg_AuraBooks = InitHashtable()
-    call InitSwapBookTable(udg_AuraBooks)
-    //Devotion Aura
-    call InitSwapBook(udg_AuraBooks, 'A00J', 'A00I', 'A00K')
-    //Retribution Aura
-    call InitSwapBook(udg_AuraBooks, 'A00O', 'A00P', 'A00N')
-    //Sanctity Aura
-    call InitSwapBook(udg_AuraBooks, 'A00S', 'A00T', 'A00R')
-    //Aura of Mercy
-    call InitSwapBook(udg_AuraBooks, 'A00W', 'A00X', 'A00V')
-endfunction
 
 function selectAuraConditions takes nothing returns boolean
     return SwapBookConditions(udg_AuraBooks)
@@ -24,7 +10,6 @@ endfunction
 
 function InitAuraSelection takes unit hero returns nothing
     local trigger auraSelectionTrigger = CreateTrigger()
-    call initAuraTable()
 
     call TriggerRegisterUnitEvent(auraSelectionTrigger, hero, EVENT_UNIT_SPELL_EFFECT)
     call TriggerAddCondition(auraSelectionTrigger, Condition(function selectAuraConditions))
