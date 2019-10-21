@@ -1,5 +1,6 @@
 import "/statMod/init.jass"
 import "/heroes/init.jass"
+import "/shops/main.jass"
 
 function InitGlobalTables takes nothing returns nothing
     set udg_ChannelCasters = InitHashtable()
@@ -12,4 +13,5 @@ function InitMain takes nothing returns nothing
     call InitGlobalTables()
     call InitStatMod()
     call InitHeroSelection()
+    call InitShops()
 endfunction

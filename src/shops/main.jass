@@ -1,0 +1,53 @@
+function NextPageConditions takes nothing returns boolean
+    return GetItemTypeId(GetSoldItem()) == 'I000'
+endfunction
+
+function NextPageActions takes nothing returns nothing
+    local player buyer = GetOwningPlayer(GetBuyingUnit())
+    local unit currentShop = GetSellingUnit()
+    local unit nextShop = LoadUnitHandle(udg_ShopsTable, GetHandleId(currentShop), 0)
+
+    call SelectUnitForPlayerSingle(nextShop, buyer)
+
+    set buyer = null
+    set currentShop = null
+    set nextShop = null
+endfunction
+
+function SetNextShop takes integer firstType, integer secondType returns nothing
+    local group firstGroup = GetUnitsOfTypeIdAll(firstType)
+    local group secondGroup = GetUnitsOfTypeIdAll(secondType)
+    local unit firstShop = FirstOfGroup(firstGroup)
+    local unit secondShop = FirstOfGroup(secondGroup)
+
+    local trigger nextPageTrigger = CreateTrigger()
+    local integer firstShopHandle = GetHandleId(firstShop)
+
+    call SaveUnitHandle(udg_ShopsTable, firstShopHandle, 0, secondShop)
+
+    call TriggerRegisterUnitEvent(nextPageTrigger, firstShop, EVENT_UNIT_SELL_ITEM)
+    call TriggerAddCondition(nextPageTrigger, Condition(function NextPageConditions))
+    call TriggerAddAction(nextPageTrigger, function NextPageActions)
+
+    call DestroyGroup(firstGroup)
+    call DestroyGroup(secondGroup)
+    set firstGroup = null
+    set secondGroup = null
+    set firstShop = null
+    set secondShop = null
+    set nextPageTrigger = null
+endfunction
+
+function InitShopTable takes nothing returns nothing
+    set udg_ShopsTable = InitHashtable()
+
+    call SetNextShop('n001', 'n002')
+    call SetNextShop('n002', 'n003')
+    call SetNextShop('n003', 'n001')
+endfunction
+
+
+
+function InitShops takes nothing returns nothing
+    call InitShopTable()
+endfunction
