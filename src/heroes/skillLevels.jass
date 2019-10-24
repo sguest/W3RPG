@@ -1,0 +1,79 @@
+import "/swapBook/triggers.jass"
+
+function SetSkillUpgrade takes integer upgradeId, integer skillId returns nothing
+    call SaveInteger(udg_SkillLevelsTable, upgradeId, StringHash("Skill"), skillId)
+endfunction
+
+function SetSwapBookUpgrade takes integer upgradeId, hashtable table returns nothing
+    call SaveHashtableHandle(udg_SkillLevelsTable, upgradeId, StringHash("SwapBookTable"), table)
+endfunction
+
+function SkillTrainedActions takes nothing returns nothing
+    local integer upgradeId = GetResearched()
+    local integer skillId = LoadInteger(udg_SkillLevelsTable, upgradeId, StringHash("Skill"))
+    local hashtable swapBookTable = LoadHashtableHandle(udg_SkillLevelsTable, upgradeId, StringHash("SwapBookTable"))
+    local player p = GetOwningPlayer(GetTriggerUnit())
+    local unit hero = udg_PlayerHeroes[GetPlayerId(p)]
+    local integer upgradeLevel = GetPlayerTechCountSimple(upgradeId, p)
+
+    if(swapBookTable == null) then
+        call SetUnitAbilityLevel(hero, skillId, upgradeLevel)
+    else
+        call SwapBookSetLevel(swapBookTable, hero, skillId, upgradeLevel)
+    endif
+
+    set hero = null
+    set swapBookTable = null
+    set p = null
+endfunction
+
+function SetTrainerUnit takes integer unitType, player p returns nothing
+    local unit u = CreateUnit(p, unitType, 10, 10, 0)
+    local trigger trainedTrigger = CreateTrigger()
+    call SaveUnitHandle(udg_SkillLevelsTable, GetHandleId(p), StringHash("TrainerUnit"), u)
+    call TriggerRegisterUnitEvent(trainedTrigger, u, EVENT_UNIT_RESEARCH_FINISH)
+    call TriggerAddAction(trainedTrigger, function SkillTrainedActions)
+
+    set trainedTrigger = null
+    set u = null
+endfunction
+
+function SelectSkillsAction takes nothing returns nothing
+    local player p = GetOwningPlayer(GetBuyingUnit())
+    local unit trainer = LoadUnitHandle(udg_SkillLevelsTable, GetHandleId(p), StringHash("TrainerUnit"))
+    call SetUnitX(trainer, GetUnitX(GetSellingUnit()))
+    call SetUnitY(trainer, GetUnitY(GetSellingUnit()))
+    call SetUnitOwner(trainer, p, true)
+    call SelectUnitForPlayerSingle(trainer, p)
+    set p = null
+    set trainer = null
+endfunction
+
+function ShopDeselectionConditions takes nothing returns boolean
+    return (GetUnitAbilityLevel(GetTriggerUnit(), 'A030') == 1)
+endfunction
+
+function ShopDeselectionActions takes nothing returns nothing
+    call SetUnitOwner(GetTriggerUnit(), Player(PLAYER_NEUTRAL_PASSIVE), true)
+endfunction
+
+function InitDeselectionPlayer takes nothing returns nothing
+    local player picked = GetEnumPlayer()
+    local trigger selectionTrigger = CreateTrigger()
+    call TriggerRegisterPlayerSelectionEventBJ(selectionTrigger, picked, false)
+    call TriggerAddCondition(selectionTrigger, Condition(function ShopDeselectionConditions))
+    call TriggerAddAction(selectionTrigger, function ShopDeselectionActions)
+
+    set selectionTrigger = null
+    set picked = null
+endfunction
+
+function InitSkillLevels takes nothing returns nothing
+    local trigger selectSkillsTrigger = CreateTrigger()
+    set udg_SkillLevelsTable = InitHashtable()
+    call TriggerRegisterUnitEvent(selectSkillsTrigger, gg_unit_n001_0002, EVENT_UNIT_SELL_ITEM)
+    call TriggerAddAction(selectSkillsTrigger, function SelectSkillsAction)
+
+    call ForForce(GetPlayersAll(), function InitDeselectionPlayer)
+    set selectSkillsTrigger = null
+endfunction

@@ -12,6 +12,6 @@ endfunction
 function InitMain takes nothing returns nothing
     call InitGlobalTables()
     call InitStatMod()
-    call InitHeroSelection()
+    call InitHeroes()
     call InitShops()
 endfunction

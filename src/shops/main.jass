@@ -40,13 +40,7 @@ endfunction
 
 function InitShopTable takes nothing returns nothing
     set udg_ShopsTable = InitHashtable()
-
-    call SetNextShop('n001', 'n002')
-    call SetNextShop('n002', 'n003')
-    call SetNextShop('n003', 'n001')
 endfunction
-
-
 
 function InitShops takes nothing returns nothing
     call InitShopTable()

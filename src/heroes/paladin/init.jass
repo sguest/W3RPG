@@ -6,6 +6,7 @@ import "/heroes/paladin/holyLight.jass"
 import "/heroes/paladin/judgment.jass"
 import "/heroes/levelStats.jass"
 import "/swapBook/init.jass"
+import "/heroes/skillLevels.jass"
 
 function InitSealTable takes nothing returns nothing
     set udg_SealBooks = InitHashtable()
@@ -33,15 +34,23 @@ function InitAuraTable takes nothing returns nothing
     call InitSwapBook(udg_AuraBooks, 'A00W', 'A00X', 'A00V', 'A00U')
 endfunction
 
+function InitSkillLevels takes nothing returns nothing
+    //Seal of light
+    call SetSkillUpgrade('R001', 'A00A')
+    call SetSwapBookUpgrade('R001', udg_SealBooks)
+endfunction
+
 function InitPaladin takes unit hero returns nothing
     if(udg_SealBooks == null) then
         call InitSealTable()
         call InitAuraTable()
         call InitSealOfRighteousness()
         call InitSealOfJustice()
+        call InitLevelStats('Hpal', 67.5, 0.135, 3, 0.45, 27, 9)
+        call InitSkillLevels()
     endif
 
-    call InitLevelStats('Hpal', 67.5, 0.135, 3, 0.45, 27, 9)
+    call SetTrainerUnit('n002', GetOwningPlayer(hero))
     call InitSealSelection(hero)
     call InitAuraSelection(hero)
     call InitHolyLight(hero)

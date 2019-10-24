@@ -2,15 +2,20 @@ import "/heroes/paladin/init.jass"
 import "/heroes/farSeer/init.jass"
 import "/heroes/demonHunter/init.jass"
 import "/heroes/levelStats.jass"
+import "/heroes/skillLevels.jass"
 
 function HeroLevelActions takes nothing returns nothing
-    call ApplyLevelStats(GetLevelingUnit())
+    local unit hero = GetLevelingUnit()
+    call ApplyLevelStats(hero)
+    call SetPlayerTechResearched(GetOwningPlayer(hero), 'R000', GetHeroLevel(hero))
+    set hero = null
 endfunction
 
 function CreateHeroLevelTrigger takes unit hero returns nothing
     local trigger levelTrigger = CreateTrigger()
     call TriggerRegisterUnitEvent(levelTrigger, hero, EVENT_UNIT_HERO_LEVEL)
     call TriggerAddAction(levelTrigger, function HeroLevelActions)
+    set levelTrigger = null
 endfunction
 
 function InitHero takes unit hero returns nothing
@@ -35,6 +40,7 @@ function HeroSoldActions takes nothing returns nothing
     call SetUnitPositionLoc(hero, targetLocation)
     call PanCameraToTimedLocForPlayer(GetOwningPlayer(hero), targetLocation, 0)
 
+    set udg_PlayerHeroes[GetPlayerId(GetOwningPlayer(hero))] = hero
     call InitHero(hero)
 
     call RemoveLocation(targetLocation)
@@ -62,4 +68,9 @@ function InitHeroSelection takes nothing returns nothing
     call TriggerAddAction(heroSoldTrigger, function HeroSoldActions)
 
     call ForForce(GetPlayersAll(), function InitHeroSelectionPlayer)
+endfunction
+
+function InitHeroes takes nothing returns nothing
+    call InitHeroSelection()
+    call InitSkillLevels()
 endfunction
