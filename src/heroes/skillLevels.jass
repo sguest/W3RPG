@@ -16,6 +16,7 @@ function SkillTrainedActions takes nothing returns nothing
     local unit hero = udg_PlayerHeroes[GetPlayerId(p)]
     local integer upgradeLevel = GetPlayerTechCountSimple(upgradeId, p)
 
+    call SetPlayerAbilityAvailable(p, skillId, true)
     if(swapBookTable == null) then
         call SetUnitAbilityLevel(hero, skillId, upgradeLevel)
     else

@@ -34,10 +34,42 @@ function InitAuraTable takes nothing returns nothing
     call InitSwapBook(udg_AuraBooks, 'A00W', 'A00X', 'A00V', 'A00U')
 endfunction
 
-function InitSkillLevels takes nothing returns nothing
+function InitPaladinSkillLevels takes nothing returns nothing
     //Seal of light
     call SetSkillUpgrade('R001', 'A00A')
     call SetSwapBookUpgrade('R001', udg_SealBooks)
+endfunction
+
+function DisablePaladinSkills takes unit hero returns nothing
+    local player p = GetOwningPlayer(hero)
+
+    //Seal of Vengeance
+    call SetPlayerAbilityAvailable(p, 'A007', false)
+    call SetPlayerAbilityAvailable(p, 'A005', false)
+    //Seal of Light
+    call SetPlayerAbilityAvailable(p, 'A00C', false)
+    call SetPlayerAbilityAvailable(p, 'A00A', false)
+    //Seal of Justice
+    call SetPlayerAbilityAvailable(p, 'A00D', false)
+    //Devotion Aura
+    call SetPlayerAbilityAvailable(p, 'A00K', false)
+    call SetPlayerAbilityAvailable(p, 'A00J', false)
+    //Retribution Aura
+    call SetPlayerAbilityAvailable(p, 'A00N', false)
+    call SetPlayerAbilityAvailable(p, 'A00O', false)
+    //Sanctity Aura
+    call SetPlayerAbilityAvailable(p, 'A00R', false)
+    call SetPlayerAbilityAvailable(p, 'A00S', false)
+    //Aura of Mercy
+    call SetPlayerAbilityAvailable(p, 'A00V', false)
+    call SetPlayerAbilityAvailable(p, 'A00W', false)
+    //Divine Shield
+    call SetPlayerAbilityAvailable(p, 'A001', false)
+    //Holy Light
+    call SetPlayerAbilityAvailable(p, 'A000', false)
+
+
+    set p = null
 endfunction
 
 function InitPaladin takes unit hero returns nothing
@@ -47,9 +79,10 @@ function InitPaladin takes unit hero returns nothing
         call InitSealOfRighteousness()
         call InitSealOfJustice()
         call InitLevelStats('Hpal', 67.5, 0.135, 3, 0.45, 27, 9)
-        call InitSkillLevels()
+        call InitPaladinSkillLevels()
     endif
 
+    call DisablePaladinSkills(hero)
     call SetTrainerUnit('n002', GetOwningPlayer(hero))
     call InitSealSelection(hero)
     call InitAuraSelection(hero)
