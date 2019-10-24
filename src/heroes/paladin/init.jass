@@ -38,6 +38,9 @@ function InitPaladinSkillLevels takes nothing returns nothing
     //Seal of light
     call SetSkillUpgrade('R001', 'A00A')
     call SetSwapBookUpgrade('R001', udg_SealBooks)
+    //Devotion Aura
+    call SetSkillUpgrade('R002', 'A00J')
+    call SetSwapBookUpgrade('R002', udg_AuraBooks)
 endfunction
 
 function DisablePaladinSkills takes unit hero returns nothing

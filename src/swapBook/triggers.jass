@@ -20,12 +20,38 @@ function SwapBookApplyLevel takes unit hero, hashtable table, integer selector r
     local integer selectorBookHash = StringHash("SelectorBook")
     local integer addedHash = StringHash("AddedAbility")
     local integer effectHash = StringHash("EffectAbility")
+    local integer addedHash = StringHash("AddedAbility")
     local integer level = LoadInteger(table, heroHandle, selector)
 
     call SetUnitAbilityLevel(hero, LoadInteger(table, selector, selectorBookHash), level)
     call SetUnitAbilityLevel(hero, selector, level)
     call SetUnitAbilityLevel(hero, LoadInteger(table, selector, addedHash), level)
     call SetUnitAbilityLevel(hero, LoadInteger(table, selector, effectHash), level)
+endfunction
+
+function SwapBookAddIfMissing takes unit hero, hashtable table, integer targetSelector returns nothing
+    local integer counter = 0
+    local integer numItems = LoadInteger(table, StringHash("NumItems"), 0)
+    local integer selector 
+    local integer parentHash = StringHash("Parent")
+    local integer selectorBookHash = StringHash("SelectorBook")
+    local integer addedHash = StringHash("AddedAbility")
+    local boolean found = false
+
+    loop
+        exitwhen counter >= numItems or found == true
+        set selector = LoadInteger(table, parentHash, counter)
+        if (GetUnitAbilityLevel(hero, LoadInteger(table, selector, selectorBookHash)) >= 1) then
+            set found = true
+        endif
+        set counter = counter + 1
+    endloop
+
+    if (found == false) then
+        call UnitAddAbility(hero, LoadInteger(table, targetSelector, selectorBookHash))
+        call UnitAddAbility(hero, LoadInteger(table, targetSelector, addedHash))
+        call SwapBookApplyLevel(hero, table, targetSelector)
+    endif
 endfunction
 
 function SwapBookActions takes hashtable table returns nothing

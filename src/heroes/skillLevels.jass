@@ -21,6 +21,7 @@ function SkillTrainedActions takes nothing returns nothing
         call SetUnitAbilityLevel(hero, skillId, upgradeLevel)
     else
         call SwapBookSetLevel(swapBookTable, hero, skillId, upgradeLevel)
+        call SwapBookAddIfMissing(hero, swapBookTable, skillId)
     endif
 
     set hero = null
