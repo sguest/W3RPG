@@ -1,13 +1,14 @@
 function SealOfRighteousnessConditions takes nothing returns boolean
-    return (GetUnitAbilityLevel(GetAttacker(), 'A008') == 1)
+    return (GetUnitAbilityLevel(GetAttacker(), 'A008') >= 1)
 endfunction
 
 function SealOfRighteousnessActions takes nothing returns nothing
     local unit caster = GetAttacker()
     local unit target = GetAttackedUnitBJ()
     local integer casterStrength = GetHeroStr(caster, true)
+    local integer level = GetUnitAbilityLevel(caster, 'A008')
 
-    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 1.5, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 0.5 * I2R(level), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
     set target = null
     set caster = null

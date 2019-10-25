@@ -43,6 +43,9 @@ function InitPaladinSkillLevels takes nothing returns nothing
     call SetSwapBookUpgrade('R002', udg_AuraBooks)
     //Holy Light
     call SetSkillUpgrade('R003', 'A000')
+    //Seal of Rightousness
+    call SetSkillUpgrade('R004', 'A003')
+    call SetSwapBookUpgrade('R004', udg_SealBooks)
 endfunction
 
 function DisablePaladinSkills takes unit hero returns nothing
@@ -77,6 +80,12 @@ function DisablePaladinSkills takes unit hero returns nothing
     set p = null
 endfunction
 
+function PaladinLearnInitialSkills takes unit hero returns nothing
+    //Seal of Righteousness
+    call SetPlayerTechResearched(GetOwningPlayer(hero), 'R004', 1)
+    call TrainSkill(hero, 'R004')
+endfunction
+
 function InitPaladin takes unit hero returns nothing
     if(udg_SealBooks == null) then
         call InitSealTable()
@@ -88,6 +97,7 @@ function InitPaladin takes unit hero returns nothing
     endif
 
     call DisablePaladinSkills(hero)
+    call PaladinLearnInitialSkills(hero)
     call SetTrainerUnit('n002', GetOwningPlayer(hero))
     call InitSealSelection(hero)
     call InitAuraSelection(hero)

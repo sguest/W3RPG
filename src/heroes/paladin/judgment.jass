@@ -23,7 +23,8 @@ function JudgmentActions takes nothing returns nothing
 
     //Seal of Righteousness
     if(GetUnitAbilityLevel(caster, 'A008') > 0) then
-        call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+        set sealLevel = GetUnitAbilityLevel(caster, 'A009')
+        call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * (2 + sealLevel), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
     //Seal of Vengeance
     elseif(GetUnitAbilityLevel(caster, 'A006') > 0) then

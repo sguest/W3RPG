@@ -8,12 +8,10 @@ function SetSwapBookUpgrade takes integer upgradeId, hashtable table returns not
     call SaveHashtableHandle(udg_SkillLevelsTable, upgradeId, StringHash("SwapBookTable"), table)
 endfunction
 
-function SkillTrainedActions takes nothing returns nothing
-    local integer upgradeId = GetResearched()
+function TrainSkill takes unit hero, integer upgradeId returns nothing
     local integer skillId = LoadInteger(udg_SkillLevelsTable, upgradeId, StringHash("Skill"))
     local hashtable swapBookTable = LoadHashtableHandle(udg_SkillLevelsTable, upgradeId, StringHash("SwapBookTable"))
-    local player p = GetOwningPlayer(GetTriggerUnit())
-    local unit hero = udg_PlayerHeroes[GetPlayerId(p)]
+    local player p = GetOwningPlayer(hero)
     local integer upgradeLevel = GetPlayerTechCountSimple(upgradeId, p)
 
     call SetPlayerAbilityAvailable(p, skillId, true)
@@ -25,8 +23,18 @@ function SkillTrainedActions takes nothing returns nothing
         call SwapBookAddIfMissing(hero, swapBookTable, skillId)
     endif
 
-    set hero = null
     set swapBookTable = null
+    set p = null
+endfunction
+
+function SkillTrainedActions takes nothing returns nothing
+    local integer upgradeId = GetResearched()
+    local player p = GetOwningPlayer(GetTriggerUnit())
+    local unit hero = udg_PlayerHeroes[GetPlayerId(p)]
+
+    call TrainSkill(hero, upgradeId)
+
+    set hero = null
     set p = null
 endfunction
 
