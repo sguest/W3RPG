@@ -9,6 +9,7 @@ function HolyLightActions takes nothing returns nothing
     local unit target = GetSpellTargetUnit()
     local location targetLocation = GetUnitLoc(target)
     local group aoeTargets = GetUnitsInRangeOfLocAll(300.00, targetLocation)
+    local integer level = GetUnitAbilityLevel(caster, 'A000')
 
     local integer casterStrength = GetHeroStr(caster, true)
     local real damageAmount
@@ -17,8 +18,8 @@ function HolyLightActions takes nothing returns nothing
     local unit picked
 
     if (IsPlayerEnemy(GetOwningPlayer(caster), GetOwningPlayer(target))) then
-        set damageAmount = R2I(casterStrength * 6)
-        set healAmount = R2I(casterStrength * 4)
+        set damageAmount = R2I(casterStrength * (level + 3))
+        set healAmount = R2I(casterStrength * (level * 0.5 + 2.5))
 
         call UnitDamageTargetBJ(caster, target, damageAmount, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
@@ -32,8 +33,8 @@ function HolyLightActions takes nothing returns nothing
             endif
         endloop
     else
-        set damageAmount = R2I(casterStrength * 3)
-        set healAmount = R2I(casterStrength * 8)
+        set damageAmount = R2I(casterStrength * (level * 0.5 + 3.5))
+        set healAmount = R2I(casterStrength * (level + 5))
 
         call HealUnit(target, healAmount)
 

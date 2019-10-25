@@ -18,6 +18,7 @@ function SkillTrainedActions takes nothing returns nothing
 
     call SetPlayerAbilityAvailable(p, skillId, true)
     if(swapBookTable == null) then
+        call UnitAddAbility(hero, skillId)
         call SetUnitAbilityLevel(hero, skillId, upgradeLevel)
     else
         call SwapBookSetLevel(swapBookTable, hero, skillId, upgradeLevel)
