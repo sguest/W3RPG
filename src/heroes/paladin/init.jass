@@ -46,6 +46,8 @@ function InitPaladinSkillLevels takes nothing returns nothing
     //Seal of Rightousness
     call SetSkillUpgrade('R004', 'A003')
     call SetSwapBookUpgrade('R004', udg_SealBooks)
+    //Judgment
+    call SetSkillUpgrade('R005', 'A00H')
 endfunction
 
 function DisablePaladinSkills takes unit hero returns nothing
@@ -76,7 +78,6 @@ function DisablePaladinSkills takes unit hero returns nothing
     //Holy Light
     call SetPlayerAbilityAvailable(p, 'A000', false)
 
-
     set p = null
 endfunction
 
@@ -84,6 +85,9 @@ function PaladinLearnInitialSkills takes unit hero returns nothing
     //Seal of Righteousness
     call SetPlayerTechResearched(GetOwningPlayer(hero), 'R004', 1)
     call TrainSkill(hero, 'R004')
+    //Judgment
+    call SetPlayerTechResearched(GetOwningPlayer(hero), 'R005', 1)
+    call TrainSkill(hero, 'R005')
 endfunction
 
 function InitPaladin takes unit hero returns nothing

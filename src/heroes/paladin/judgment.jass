@@ -19,7 +19,7 @@ function JudgmentActions takes nothing returns nothing
 
     call PolledWait(distance / 1000)
 
-    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * 3, ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
+    call UnitDamageTargetBJ(caster, target, I2R(casterStrength) * (GetUnitAbilityLevel(caster, 'A00H') + 1), ATTACK_TYPE_NORMAL, DAMAGE_TYPE_NORMAL)
 
     //Seal of Righteousness
     if(GetUnitAbilityLevel(caster, 'A008') > 0) then
