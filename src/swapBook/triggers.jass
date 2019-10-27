@@ -20,7 +20,6 @@ function SwapBookApplyLevel takes unit hero, hashtable table, integer selector r
     local integer selectorBookHash = StringHash("SelectorBook")
     local integer addedHash = StringHash("AddedAbility")
     local integer effectHash = StringHash("EffectAbility")
-    local integer addedHash = StringHash("AddedAbility")
     local integer level = LoadInteger(table, heroHandle, selector)
 
     call SetUnitAbilityLevel(hero, LoadInteger(table, selector, selectorBookHash), level)
