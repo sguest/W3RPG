@@ -1,0 +1,9 @@
+{
+  "name": "W3RPG",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "build": "node build.js src/main.jass out.jass"
+  }
+}
