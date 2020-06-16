@@ -1,0 +1,3018 @@
+﻿STRING 1
+{
+Player 1
+}
+
+STRING 3
+{
+Force 1
+}
+
+STRING 4
+// Abilities: A000 (Holy Light), Name (Name)
+{
+Holy Light
+}
+
+STRING 5
+// Units: o000 (Shadow Wolf), EditorSuffix (Name - Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 6
+// Abilities: A000 (Holy Light), Hotkey (Hotkey - Normal)
+{
+T
+}
+
+STRING 9
+{
+RPG
+}
+
+STRING 10
+{
+Any
+}
+
+STRING 11
+{
+Nondescript
+}
+
+STRING 12
+{
+Unknown
+}
+
+STRING 14
+// Abilities: A000 (Holy Light), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 16
+// Abilities: A001 (Divine Shield), Tip (Tooltip - Normal)
+{
+|cffffcc00D|rivine Shield
+}
+
+STRING 17
+// Abilities: A002 (Seal of Righteousness), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 18
+// Abilities: A002 (Seal of Righteousness), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 19
+// Abilities: A002 (Seal of Righteousness), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 22
+// Abilities: A003 (Seal of Righteousness), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 23
+// Abilities: A003 (Seal of Righteousness), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 27
+// Abilities: A004 (Seal of Vengeance), Name (Name)
+{
+Seal of Vengeance
+}
+
+STRING 28
+// Abilities: A004 (Seal of Vengeance), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 29
+// Abilities: A004 (Seal of Vengeance), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 30
+// Abilities: A004 (Seal of Vengeance), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Vengeance
+}
+
+STRING 32
+// Abilities: A005 (Seal of Vengeance), Name (Name)
+{
+Seal of Vengeance
+}
+
+STRING 33
+// Abilities: A005 (Seal of Vengeance), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 35
+// Abilities: A005 (Seal of Vengeance), Tip (Tooltip - Normal)
+{
+Seal of |cffffcc00V|rengeance
+}
+
+STRING 37
+// Abilities: A006 (Seal of Vengeance), Name (Name)
+{
+Seal of Vengeance
+}
+
+STRING 38
+// Abilities: A006 (Seal of Vengeance), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 40
+// Abilities: A006 (Seal of Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal <A006,DataA1,%>% of their damage to nearby enemies.
+}
+
+STRING 41
+// Abilities: A007 (Seal of Vengeance), Name (Name)
+{
+Seal of Vengeance
+}
+
+STRING 42
+// Abilities: A007 (Seal of Vengeance), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 45
+// Abilities: A008 (Seal of Righteousness), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 46
+// Abilities: A008 (Seal of Righteousness), EditorSuffix (Editor Suffix)
+{
+ (Marker)
+}
+
+STRING 51
+// Abilities: A001 (Divine Shield), Ubertip (Tooltip - Normal - Extended)
+{
+An impenetrable shield surrounds this unit, protecting it from all damage and spells for <A001,Dur1> seconds.|n|n|cff00ffffCooldown|r <A001,Cool1> seconds
+}
+
+STRING 55
+// Abilities: A009 (Seal of Light), Name (Name)
+{
+Seal of Light
+}
+
+STRING 56
+// Abilities: A009 (Seal of Light), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 57
+// Abilities: A009 (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of Light
+}
+
+STRING 59
+// Abilities: A009 (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of Light
+}
+
+STRING 60
+// Abilities: A00A (Seal of Light), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 64
+// Abilities: A009 (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of Light
+}
+
+STRING 65
+// Abilities: A00B (Seal of Light), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 66
+// Abilities: A00A (Seal of Light), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 69
+// Abilities: A00A (Seal of Light), Name (Name)
+{
+Seal of Light
+}
+
+STRING 70
+// Abilities: A00C (Seal of Light), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 72
+// Abilities: A003 (Seal of Righteousness), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 74
+// Abilities: A005 (Seal of Vengeance), Hotkey (Hotkey - Normal)
+{
+V
+}
+
+STRING 75
+// Abilities: A00B (Seal of Light), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 76
+// Abilities: A00D (Seal of Justice), Name (Name)
+{
+Seal of Justice
+}
+
+STRING 77
+// Abilities: A00D (Seal of Justice), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 78
+// Abilities: A00D (Seal of Justice), Hotkey (Hotkey - Normal)
+{
+J
+}
+
+STRING 79
+// Abilities: A00D (Seal of Justice), Tip (Tooltip - Normal)
+{
+Seal of |cffffcc00J|rustice
+}
+
+STRING 81
+// Abilities: A00E (Seal of Justice), Name (Name)
+{
+Seal of Justice
+}
+
+STRING 82
+// Abilities: A00E (Seal of Justice), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 83
+// Abilities: A00E (Seal of Justice), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 84
+// Abilities: A00E (Seal of Justice), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Justice
+}
+
+STRING 86
+// Abilities: A00F (Seal of Justice), Name (Name)
+{
+Seal of Justice
+}
+
+STRING 87
+// Abilities: A00F (Seal of Justice), EditorSuffix (Editor Suffix)
+{
+ (Marker)
+}
+
+STRING 88
+// Abilities: A00G (Stun Effect), Name (Name)
+{
+Stun Effect
+}
+
+STRING 89
+// Units: h000 (Trigger Caster), Name (Name)
+{
+Trigger Caster
+}
+
+STRING 90
+// Abilities: A00H (Judgment), Name (Name)
+{
+Judgment
+}
+
+STRING 91
+// Abilities: A001 (Divine Shield), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 92
+// Abilities: A00H (Judgment), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 98
+// Abilities: A00I (Devotion Aura), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 99
+// Abilities: A00I (Devotion Aura), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 100
+// Abilities: A00I (Devotion Aura), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 103
+// Abilities: A00J (Devotion Aura), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 104
+// Abilities: A00J (Devotion Aura), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 105
+// Abilities: A00J (Devotion Aura), Hotkey (Hotkey - Normal)
+{
+D
+}
+
+STRING 108
+// Abilities: A00K (Devotion Aura), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 109
+// Abilities: A00K (Devotion Aura), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 110
+// Abilities: A00L (Devotion Aura), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 111
+// Abilities: A00I (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA1,%>% bonus armor to nearby allies.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 112
+// Abilities: A00J (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA1,%>% bonus armor to nearby allies.
+}
+
+STRING 114
+// Abilities: A00M (Retribution Aura), Name (Name)
+{
+Retribution Aura
+}
+
+STRING 115
+// Abilities: A00M (Retribution Aura), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 116
+// Abilities: A00N (Retribution Aura), Name (Name)
+{
+Retribution Aura
+}
+
+STRING 117
+// Abilities: A00N (Retribution Aura), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 118
+// Abilities: A00O (Retribution Aura), Name (Name)
+{
+Retribution Aura
+}
+
+STRING 119
+// Abilities: A00O (Retribution Aura), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 120
+// Abilities: A00O (Retribution Aura), Hotkey (Hotkey - Normal)
+{
+R
+}
+
+STRING 121
+// Abilities: A00O (Retribution Aura), Tip (Tooltip - Normal)
+{
+|cffffcc00R|retribution Aura
+}
+
+STRING 122
+// Abilities: A00O (Retribution Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a damage shield, which deals <A00M,DataA1,%>% of an enemy unit's melee attack damage back to it.
+}
+
+STRING 123
+// Abilities: A00P (Retribution Aura), Name (Name)
+{
+Retribution Aura
+}
+
+STRING 124
+// Abilities: A00P (Retribution Aura), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 125
+// Abilities: A00P (Retribution Aura), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 126
+// Abilities: A00P (Retribution Aura), Tip (Tooltip - Normal)
+{
+Retribution A|cffffcc00u|rra
+}
+
+STRING 127
+// Abilities: A00P (Retribution Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a damage shield, which deals <A00M,DataA1,%>% of an enemy unit's melee attack damage back to it.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 128
+// Buffs/Effects: B000 (), Bufftip (Tooltip)
+{
+Retribution Aura
+}
+
+STRING 129
+// Buffs/Effects: B000 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Retribution Aura; melee units that attack it will take damage.
+}
+
+STRING 130
+// Abilities: A00Q (Sanctity Aura), Name (Name)
+{
+Sanctity Aura
+}
+
+STRING 131
+// Abilities: A00Q (Sanctity Aura), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 132
+// Abilities: A00R (Sanctity Aura), Name (Name)
+{
+Sanctity Aura
+}
+
+STRING 133
+// Abilities: A00R (Sanctity Aura), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 134
+// Abilities: A00S (Sanctity Aura), Name (Name)
+{
+Sanctity Aura
+}
+
+STRING 135
+// Abilities: A00S (Sanctity Aura), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 136
+// Abilities: A00S (Sanctity Aura), Hotkey (Hotkey - Normal)
+{
+S
+}
+
+STRING 137
+// Abilities: A00S (Sanctity Aura), Tip (Tooltip - Normal)
+{
+|cffffcc00S|ranctity Aura
+}
+
+STRING 138
+// Abilities: A00S (Sanctity Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A00Q,DataA1,%>% bonus to attack damage.
+}
+
+STRING 139
+// Abilities: A00T (Sanctity Aura), Name (Name)
+{
+Sanctity Aura
+}
+
+STRING 140
+// Abilities: A00T (Sanctity Aura), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 141
+// Abilities: A00T (Sanctity Aura), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 142
+// Abilities: A00T (Sanctity Aura), Tip (Tooltip - Normal)
+{
+Sanctity A|cffffcc00u|rra
+}
+
+STRING 143
+// Abilities: A00T (Sanctity Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A00Q,DataA1,%>% bonus to attack damage.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 144
+// Buffs/Effects: B001 (), Bufftip (Tooltip)
+{
+Sanctity Aura
+}
+
+STRING 145
+// Buffs/Effects: B001 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effect of Sanctity Aura; it has increased attack damage.
+}
+
+STRING 146
+// Abilities: A00U (Aura of Mercy), Name (Name)
+{
+Aura of Mercy
+}
+
+STRING 147
+// Abilities: A00U (Aura of Mercy), EditorSuffix (Editor Suffix)
+{
+ (Effect)
+}
+
+STRING 148
+// Abilities: A00V (Aura of Mercy), Name (Name)
+{
+Aura of Mercy
+}
+
+STRING 149
+// Abilities: A00V (Aura of Mercy), EditorSuffix (Editor Suffix)
+{
+ (Disabled Book)
+}
+
+STRING 150
+// Abilities: A00W (Aura of Mercy), Name (Name)
+{
+Aura of Mercy
+}
+
+STRING 151
+// Abilities: A00W (Aura of Mercy), EditorSuffix (Editor Suffix)
+{
+ (Selector)
+}
+
+STRING 152
+// Abilities: A00W (Aura of Mercy), Hotkey (Hotkey - Normal)
+{
+M
+}
+
+STRING 153
+// Abilities: A00W (Aura of Mercy), Tip (Tooltip - Normal)
+{
+Aura of |cffffcc00M|rercy
+}
+
+STRING 154
+// Abilities: A00W (Aura of Mercy), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A00U,DataB1,%>% bonus to health regeneration.
+}
+
+STRING 155
+// Abilities: A00X (Aura of Mercy), Name (Name)
+{
+Aura of Mercy
+}
+
+STRING 156
+// Abilities: A00X (Aura of Mercy), EditorSuffix (Editor Suffix)
+{
+ (Selection Book)
+}
+
+STRING 157
+// Abilities: A00X (Aura of Mercy), Hotkey (Hotkey - Normal)
+{
+U
+}
+
+STRING 158
+// Abilities: A00X (Aura of Mercy), Tip (Tooltip - Normal)
+{
+A|cffffcc00u|rra of Mercy
+}
+
+STRING 159
+// Abilities: A00X (Aura of Mercy), Ubertip (Tooltip - Normal - Extended)
+{
+Gives friendly nearby units a <A00U,DataB1,%>% bonus to health regeneration.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 160
+// Buffs/Effects: B002 (), Bufftip (Tooltip)
+{
+Aura of Mercy
+}
+
+STRING 161
+// Buffs/Effects: B002 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Aura of Mercy; it has an increased hit point regeneration.
+}
+
+STRING 162
+// Abilities: A00Y (Chain Lightning), Name (Name)
+{
+Chain Lightning
+}
+
+STRING 163
+// Abilities: A00H (Judgment), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 164
+// Abilities: A00Y (Chain Lightning), Tip (Tooltip - Normal)
+{
+|cffffcc00C|rhain Lightning
+}
+
+STRING 166
+// Abilities: A00Z (Stat Mod Attack +1), Name (Name)
+{
+Stat Mod Attack +1
+}
+
+STRING 167
+// Abilities: A010 (Stat Mod Attack +2), Name (Name)
+{
+Stat Mod Attack +2
+}
+
+STRING 168
+// Abilities: A011 (Stat Mod Attack +4), Name (Name)
+{
+Stat Mod Attack +4
+}
+
+STRING 169
+// Abilities: A012 (Stat Mod Attack +8), Name (Name)
+{
+Stat Mod Attack +8
+}
+
+STRING 170
+// Abilities: A013 (Stat Mod Attack +16), Name (Name)
+{
+Stat Mod Attack +16
+}
+
+STRING 171
+// Abilities: A014 (Stat Mod Attack +32), Name (Name)
+{
+Stat Mod Attack +32
+}
+
+STRING 172
+// Abilities: A015 (Stat Mod Attack +64), Name (Name)
+{
+Stat Mod Attack +64
+}
+
+STRING 173
+// Abilities: A016 (Stat Mod Attack +128), Name (Name)
+{
+Stat Mod Attack +128
+}
+
+STRING 174
+// Abilities: A017 (Stat Mod Attack +256), Name (Name)
+{
+Stat Mod Attack +256
+}
+
+STRING 175
+// Abilities: A018 (Stat Mod Attack -512), Name (Name)
+{
+Stat Mod Attack -512
+}
+
+STRING 180
+// Abilities: A01B (Stat Mod Health +2), Name (Name)
+{
+Stat Mod Health +2
+}
+
+STRING 181
+// Abilities: A01C (Stat Mod Health +1), Name (Name)
+{
+Stat Mod Health +1
+}
+
+STRING 182
+// Abilities: A01D (Stat Mod Health +8), Name (Name)
+{
+Stat Mod Health +8
+}
+
+STRING 183
+// Abilities: A01E (Stat Mod Health +16), Name (Name)
+{
+Stat Mod Health +16
+}
+
+STRING 184
+// Abilities: A01F (Stat Mod Health +32), Name (Name)
+{
+Stat Mod Health +32
+}
+
+STRING 185
+// Abilities: A01G (Stat Mod Health +64), Name (Name)
+{
+Stat Mod Health +64
+}
+
+STRING 186
+// Abilities: A01H (Stat Mod Health +128), Name (Name)
+{
+Stat Mod Health +128
+}
+
+STRING 187
+// Abilities: A01I (Stat Mod Health +256), Name (Name)
+{
+Stat Mod Health +256
+}
+
+STRING 188
+// Abilities: A01J (Stat Mod Health +512), Name (Name)
+{
+Stat Mod Health +512
+}
+
+STRING 189
+// Abilities: A01K (Stat Mod Health +1024), Name (Name)
+{
+Stat Mod Health +1024
+}
+
+STRING 190
+// Abilities: A01L (Stat Mod Health +2048), Name (Name)
+{
+Stat Mod Health +2048
+}
+
+STRING 191
+// Abilities: A01M (Stat Mod Health +4096), Name (Name)
+{
+Stat Mod Health +4096
+}
+
+STRING 192
+// Abilities: A01N (Stat Mod Health -8192), Name (Name)
+{
+Stat Mod Health -8192
+}
+
+STRING 193
+// Abilities: A01O (Stat Mod Health +4), Name (Name)
+{
+Stat Mod Health +4
+}
+
+STRING 194
+// Abilities: A01P (Stat Mod Armor -256), Name (Name)
+{
+Stat Mod Armor -256
+}
+
+STRING 195
+// Abilities: A01Q (Stat Mod Armor +2), Name (Name)
+{
+Stat Mod Armor +2
+}
+
+STRING 196
+// Abilities: A01R (Stat Mod Armor +4), Name (Name)
+{
+Stat Mod Armor +4
+}
+
+STRING 197
+// Abilities: A01S (Stat Mod Armor +8), Name (Name)
+{
+Stat Mod Armor +8
+}
+
+STRING 198
+// Abilities: A01T (Stat Mod Armor +16), Name (Name)
+{
+Stat Mod Armor +16
+}
+
+STRING 199
+// Abilities: A01U (Stat Mod Armor +32), Name (Name)
+{
+Stat Mod Armor +32
+}
+
+STRING 200
+// Abilities: A01V (Stat Mod Armor +64), Name (Name)
+{
+Stat Mod Armor +64
+}
+
+STRING 201
+// Abilities: A01W (Stat Mod Armor +128), Name (Name)
+{
+Stat Mod Armor +128
+}
+
+STRING 202
+// Abilities: A01X (Stat Mod Armor +1), Name (Name)
+{
+Stat Mod Armor +1
+}
+
+STRING 203
+// Abilities: A01Y (Stat Mod Health Regen +2), Name (Name)
+{
+Stat Mod Health Regen +2
+}
+
+STRING 204
+// Abilities: A01Z (Stat Mod Health Regen +4), Name (Name)
+{
+Stat Mod Health Regen +4
+}
+
+STRING 205
+// Abilities: A020 (Stat Mod Health Regen +8), Name (Name)
+{
+Stat Mod Health Regen +8
+}
+
+STRING 206
+// Abilities: A021 (Stat Mod Health Regen +16), Name (Name)
+{
+Stat Mod Health Regen +16
+}
+
+STRING 207
+// Abilities: A022 (Stat Mod Health Regen +32), Name (Name)
+{
+Stat Mod Health Regen +32
+}
+
+STRING 208
+// Abilities: A023 (Stat Mod Health Regen +64), Name (Name)
+{
+Stat Mod Health Regen +64
+}
+
+STRING 209
+// Abilities: A024 (Stat Mod Health Regen -128), Name (Name)
+{
+Stat Mod Health Regen -128
+}
+
+STRING 210
+// Abilities: A025 (Stat Mod Health Regen +1), Name (Name)
+{
+Stat Mod Health Regen +1
+}
+
+STRING 211
+// Abilities: A00Y (Chain Lightning), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 212
+// Abilities: A019 (Feral Spirit), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 213
+// Abilities: A019 (Feral Spirit), Ubertip (Tooltip - Normal - Extended)
+{
+Summons <A019,DataB1> Spirit Wolf companions that have Critical Strike and are invisible unless they are attacking. The wolves scale in strength based on the Far Seer's attributes. |nLasts <A019,Dur1> seconds. |n|n|cffffcc00Attacks land units.|r|n|n|cff00ffffCooldown|r <A019,Cool1> seconds
+}
+
+STRING 214
+// Abilities: A019 (Feral Spirit), Tip (Tooltip - Normal)
+{
+Feral Spiri|cffffcc00t|r
+}
+
+STRING 215
+// Abilities: A01A (Stat Mod Attack Speed +1.28), Name (Name)
+{
+Stat Mod Attack Speed +1.28
+}
+
+STRING 216
+// Abilities: A026 (Stat Mod Attack Speed +0.32), Name (Name)
+{
+Stat Mod Attack Speed +0.32
+}
+
+STRING 217
+// Abilities: A027 (Stat Mod Attack Speed +0.04), Name (Name)
+{
+Stat Mod Attack Speed +0.04
+}
+
+STRING 218
+// Abilities: A028 (Stat Mod Attack Speed +0.08), Name (Name)
+{
+Stat Mod Attack Speed +0.08
+}
+
+STRING 219
+// Abilities: A029 (Stat Mod Attack Speed -2.56), Name (Name)
+{
+Stat Mod Attack Speed -2.56
+}
+
+STRING 220
+// Abilities: A02A (Stat Mod Attack Speed +0.01), Name (Name)
+{
+Stat Mod Attack Speed +0.01
+}
+
+STRING 221
+// Abilities: A02B (Stat Mod Attack Speed +0.16), Name (Name)
+{
+Stat Mod Attack Speed +0.16
+}
+
+STRING 222
+// Abilities: A02C (Stat Mod Attack Speed +0.02), Name (Name)
+{
+Stat Mod Attack Speed +0.02
+}
+
+STRING 223
+// Abilities: A02D (Stat Mod Attack Speed +0.64), Name (Name)
+{
+Stat Mod Attack Speed +0.64
+}
+
+STRING 224
+// Abilities: A02E (Earthquake), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 227
+// Abilities: A02F (Lightning Shield), Name (Name)
+{
+Lightning Shield
+}
+
+STRING 228
+// Abilities: A02F (Lightning Shield), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 231
+// Abilities: A02G (Lightning Shield), Name (Name)
+{
+Lightning Shield
+}
+
+STRING 234
+// Abilities: A02G (Lightning Shield), EditorSuffix (Editor Suffix)
+{
+ (Buff Marker)
+}
+
+STRING 235
+// Abilities: A02F (Lightning Shield), Tip (Tooltip - Normal)
+{
+|cffffcc00L|rightning Shield
+}
+
+STRING 236
+// Abilities: A02F (Lightning Shield), Hotkey (Hotkey - Normal)
+{
+L
+}
+
+STRING 238
+// Abilities: A02H (Earth Shield), Name (Name)
+{
+Earth Shield
+}
+
+STRING 239
+// Abilities: A02H (Earth Shield), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 240
+// Abilities: A02H (Earth Shield), Tip (Tooltip - Normal)
+{
+|cffffcc00E|rarth Shield
+}
+
+STRING 242
+// Abilities: A02H (Earth Shield), Hotkey (Hotkey - Normal)
+{
+E
+}
+
+STRING 243
+// Abilities: A02I (Shields), Name (Name)
+{
+Shields
+}
+
+STRING 244
+// Abilities: A02I (Shields), EditorSuffix (Editor Suffix)
+{
+ (Shaman Selection)
+}
+
+STRING 248
+// Abilities: A02J (Earth Shield), Name (Name)
+{
+Earth Shield
+}
+
+STRING 249
+// Abilities: A02J (Earth Shield), EditorSuffix (Editor Suffix)
+{
+ (Buff Marker)
+}
+
+STRING 250
+// Buffs/Effects: B003 (), Bufftip (Tooltip)
+{
+Earth Shield
+}
+
+STRING 251
+// Buffs/Effects: B003 (), Buffubertip (Tooltip - Extended)
+{
+This unit has an Earth Shield; it has bonus armor and will be healed when attacked.
+}
+
+STRING 252
+// Abilities: A02K (Mana Burn), Name (Name)
+{
+Mana Burn
+}
+
+STRING 253
+// Abilities: A02K (Mana Burn), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 254
+// Abilities: A02K (Mana Burn), Hotkey (Hotkey - Normal)
+{
+B
+}
+
+STRING 255
+// Abilities: A02K (Mana Burn), Tip (Tooltip - Normal)
+{
+Mana |cffffcc00B|rurn
+}
+
+STRING 257
+// Abilities: A02L (Immolation), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 258
+// Abilities: A02L (Immolation), Tip (Tooltip - Normal)
+{
+Activate Immo|cffffcc00l|ration
+}
+
+STRING 260
+// Abilities: A02M (Metamorphosis), EditorSuffix (Editor Suffix)
+{
+ (RPG)
+}
+
+STRING 262
+// Units: h001 (Hero Selector), Name (Name)
+{
+Hero Selector
+}
+
+STRING 266
+// Abilities: A004 (Seal of Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal <A006,DataA1,%>% of their damage to nearby enemies.|n|n|cffff00ffJudgment|r Deals damage to nearby enemies equal to |cff00ff001.5x Str|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 267
+// Abilities: A005 (Seal of Vengeance), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal <A006,DataA1,%>% of their damage to nearby enemies.|n|n|cffff00ffJudgment|r Deals damage to nearby enemies equal to |cff00ff001.5x Str|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 270
+// Abilities: A00D (Seal of Justice), Ubertip (Tooltip - Normal - Extended)
+{
+Gives your attacks a 25% chance to deal bonus damage equal to |cff00ff002x Str|r and stun the target for 2 seconds,|n|n|cffff00ffJudgment|r Stuns the target for 4 seconds.|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 271
+// Abilities: A00E (Seal of Justice), Ubertip (Tooltip - Normal - Extended)
+{
+Gives your attacks a 25% chance to deal bonus damage equal to |cff00ff002x Str|r and stun the target for 2 seconds,|n|n|cffff00ffJudgment|r Stuns the target for 4 seconds.|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 273
+// Abilities: A00Y (Chain Lightning), Ubertip (Tooltip - Normal - Extended)
+{
+Calls forth a bolt of lightning that bounces up to 6 times, dealing |cff00ff005x Int|r damage on the primary target. Each jump deals less damage.|n|n|cff00ffffCooldown|r <A00Y,Cool1> seconds
+}
+
+STRING 274
+// Abilities: A02E (Earthquake), Ubertip (Tooltip - Normal - Extended)
+{
+Makes the ground tremble and break, causing  |cff00ff002x Int|r damage per second to enemies and slowing them by <A02E,DataC1,%>% within the area of effect. |nLasts <A02E,Dur1> seconds.|n|n|cff00ffffCooldown|r <A02E,Cool1> seconds
+}
+
+STRING 275
+// Abilities: A02F (Lightning Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Forms a shield of electricity around a target unit, dealing |cff00ff000.5x Int|r damage per second to enemy units around it. |nLimit 1 shield active at once.|n|n|cff00ffffCooldown|r <A02F,Cool1> seconds
+}
+
+STRING 276
+// Abilities: A02H (Earth Shield), Ubertip (Tooltip - Normal - Extended)
+{
+Creates a protective earth shield on an ally, granting bonus armor equal to |cff00ff000.1x Int|r and healing for |cff00ff002x Int|r when attacked.|nHeals at most once every 5 seconds|nLimit 1 shield active at once.|n|n|cff00ffffCooldown|r <A02H,Cool1> seconds
+}
+
+STRING 277
+// Abilities: A02K (Mana Burn), Ubertip (Tooltip - Normal - Extended)
+{
+Sends a bolt of negative energy, dealing |cff00ff008x Agi|r damage and destroying an equal amount of mana.|n|n|cff00ffffCooldown|r <A02K,Cool1> seconds
+}
+
+STRING 278
+// Abilities: A02L (Immolation), Ubertip (Tooltip - Normal - Extended)
+{
+Activate Immolation to engulf this unit in flames, causing |cff00ff000.5x Agi|r damage per second to nearby enemy land units. |nDrains mana until deactivated.
+}
+
+STRING 279
+// Abilities: A02M (Metamorphosis), Ubertip (Tooltip - Normal - Extended)
+{
+Transforms the Demon Hunter into a powerful Demon with a ranged attack, |cff00ff000.75x Agi|r bonus damage, and |cff00ff0020x Agi|r bonus hit points. |nLasts <A02M,HeroDur1> seconds..|n|n|cff00ffffCooldown|r <A02M,Cool1> seconds
+}
+
+STRING 281
+// Abilities: A02I (Shields), Tip (Tooltip - Normal)
+{
+Sh|cffffcc00i|relds
+}
+
+STRING 282
+// Abilities: A02I (Shields), Ubertip (Tooltip - Normal - Extended)
+{
+A selection of shield spells that provide a boon to any ally.|nLimit 1 shield active at once.
+}
+
+STRING 283
+// Abilities: A02I (Shields), Hotkey (Hotkey - Normal)
+{
+I
+}
+
+STRING 284
+// Abilities: A00B (Seal of Light), Name (Name)
+{
+Seal of Light
+}
+
+STRING 285
+// Buffs/Effects: B004 (), Buffubertip (Tooltip - Extended)
+{
+This unit is under the effects of Seal of Light; damage it deals to enemy units will restore hit points.
+}
+
+STRING 286
+// Units: n000 (Debug Shop), Name (Name)
+{
+Debug Shop
+}
+
+STRING 287
+// Abilities: A02N (Stat Mod Mana Regen +0.02), Name (Name)
+{
+Stat Mod Mana Regen +0.02
+}
+
+STRING 288
+// Abilities: A02O (Stat Mod Mana Regen +0.04), Name (Name)
+{
+Stat Mod Mana Regen +0.04
+}
+
+STRING 289
+// Abilities: A02P (Stat Mod Mana Regen +0.08), Name (Name)
+{
+Stat Mod Mana Regen +0.08
+}
+
+STRING 290
+// Abilities: A02Q (Stat Mod Mana Regen +0.16), Name (Name)
+{
+Stat Mod Mana Regen +0.16
+}
+
+STRING 291
+// Abilities: A02R (Stat Mod Mana Regen +0.32), Name (Name)
+{
+Stat Mod Mana Regen +0.32
+}
+
+STRING 292
+// Abilities: A02S (Stat Mod Mana Regen +0.64), Name (Name)
+{
+Stat Mod Mana Regen +0.64
+}
+
+STRING 293
+// Abilities: A02T (Stat Mod Mana Regen +1.28), Name (Name)
+{
+Stat Mod Mana Regen +1.28
+}
+
+STRING 294
+// Abilities: A02U (Stat Mod Mana Regen +2.56), Name (Name)
+{
+Stat Mod Mana Regen +2.56
+}
+
+STRING 295
+// Abilities: A02V (Stat Mod Mana Regen -5.12), Name (Name)
+{
+Stat Mod Mana Regen -5.12
+}
+
+STRING 296
+// Abilities: A02W (Stat Mod Mana Regen +0.01), Name (Name)
+{
+Stat Mod Mana Regen +0.01
+}
+
+STRING 297
+// Abilities: A02X (Stat Mod Mana +2048), Name (Name)
+{
+Stat Mod Mana +2048
+}
+
+STRING 298
+// Abilities: A02Y (Stat Mod Mana +4096), Name (Name)
+{
+Stat Mod Mana +4096
+}
+
+STRING 299
+// Abilities: A02Z (Stat Mod Mana -8192), Name (Name)
+{
+Stat Mod Mana -8192
+}
+
+STRING 300
+// Abilities: A032 (Stat Mod Mana +1024), Name (Name)
+{
+Stat Mod Mana +1024
+}
+
+STRING 301
+// Abilities: A033 (Stat Mod Mana +512), Name (Name)
+{
+Stat Mod Mana +512
+}
+
+STRING 302
+// Abilities: A034 (Stat Mod Mana +256), Name (Name)
+{
+Stat Mod Mana +256
+}
+
+STRING 303
+// Abilities: A035 (Stat Mod Mana +128), Name (Name)
+{
+Stat Mod Mana +128
+}
+
+STRING 304
+// Abilities: A036 (Stat Mod Mana +64), Name (Name)
+{
+Stat Mod Mana +64
+}
+
+STRING 305
+// Abilities: A037 (Stat Mod Mana +32), Name (Name)
+{
+Stat Mod Mana +32
+}
+
+STRING 306
+// Abilities: A038 (Stat Mod Mana +16), Name (Name)
+{
+Stat Mod Mana +16
+}
+
+STRING 307
+// Abilities: A039 (Stat Mod Mana +8), Name (Name)
+{
+Stat Mod Mana +8
+}
+
+STRING 308
+// Abilities: A03A (Stat Mod Mana +4), Name (Name)
+{
+Stat Mod Mana +4
+}
+
+STRING 309
+// Abilities: A03B (Stat Mod Mana +2), Name (Name)
+{
+Stat Mod Mana +2
+}
+
+STRING 310
+// Abilities: A03C (Stat Mod Mana +1), Name (Name)
+{
+Stat Mod Mana +1
+}
+
+STRING 311
+// Abilities: A030 (Shop Deselection Marker), Tip (Tooltip - Normal)
+{
+Level 2
+}
+
+STRING 312
+// Abilities: A030 (Shop Deselection Marker), Tip (Tooltip - Normal)
+{
+Level 3
+}
+
+STRING 315
+// Abilities: A00C (Seal of Light), Name (Name)
+{
+Seal of Light
+}
+
+STRING 316
+// Buffs/Effects: B004 (), Bufftip (Tooltip)
+{
+Seal of Light
+}
+
+STRING 318
+// Items: I002 (Seal of Light Level 1), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA1,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 321
+// Items: I003 (Seal of Light Level 2), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA2,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 322
+// Items: I001 (Seal of Light Level 3), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA3,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 324
+// Abilities: A00A (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA1,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 327
+// Abilities: A00A (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA2,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 328
+// Abilities: A00A (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA3,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 329
+// Abilities: A00A (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 1|r]
+}
+
+STRING 330
+// Abilities: A00A (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 2|r]
+}
+
+STRING 331
+// Abilities: A00A (Seal of Light), Tip (Tooltip - Normal)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 3|r]
+}
+
+STRING 332
+// Abilities: A00B (Seal of Light), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Light - [|cffffcc00Level 1|r]
+}
+
+STRING 333
+// Abilities: A00B (Seal of Light), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Light - [|cffffcc00Level 2|r]
+}
+
+STRING 334
+// Abilities: A00B (Seal of Light), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Light - [|cffffcc00Level 3|r]
+}
+
+STRING 335
+// Items: I000 (Next Page), Name (Name)
+{
+Next Page
+}
+
+STRING 343
+// Items: I000 (Next Page), Description (Description)
+{
+Next page
+}
+
+STRING 347
+// Items: I000 (Next Page), Tip (Tooltip - Basic)
+{
+Next Page
+}
+
+STRING 348
+// Items: I000 (Next Page), Ubertip (Tooltip - Extended)
+{
+This vendor has more to sell
+}
+
+STRING 449
+// Items: I001 (Seal of Light Level 3), Name (Name)
+{
+Seal of Light Level 3
+}
+
+STRING 450
+// Items: I001 (Seal of Light Level 3), Tip (Tooltip - Basic)
+{
+Seal of Light - [|cffffcc00Level 3|r]
+}
+
+STRING 451
+// Items: I002 (Seal of Light Level 1), Name (Name)
+{
+Seal of Light Level 1
+}
+
+STRING 452
+// Items: I002 (Seal of Light Level 1), Tip (Tooltip - Basic)
+{
+Seal of Light - [|cffffcc00Level 1|r]
+}
+
+STRING 453
+// Items: I003 (Seal of Light Level 2), Name (Name)
+{
+Seal of Light Level 2
+}
+
+STRING 454
+// Items: I003 (Seal of Light Level 2), Tip (Tooltip - Basic)
+{
+Seal of Light - [|cffffcc00Level 2|r]
+}
+
+STRING 455
+// Abilities: A00B (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA1,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 456
+// Abilities: A00B (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA2,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 457
+// Abilities: A00B (Seal of Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heal for <A009,DataA3,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 458
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 1
+}
+
+STRING 459
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 2
+}
+
+STRING 460
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 3
+}
+
+STRING 461
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 4
+}
+
+STRING 462
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 5
+}
+
+STRING 463
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 6
+}
+
+STRING 464
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 7
+}
+
+STRING 465
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 8
+}
+
+STRING 466
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 9
+}
+
+STRING 467
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 10
+}
+
+STRING 468
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 11
+}
+
+STRING 469
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 12
+}
+
+STRING 470
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 13
+}
+
+STRING 471
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 14
+}
+
+STRING 472
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 15
+}
+
+STRING 473
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 16
+}
+
+STRING 474
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 17
+}
+
+STRING 475
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 18
+}
+
+STRING 476
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 19
+}
+
+STRING 477
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 20
+}
+
+STRING 478
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 21
+}
+
+STRING 479
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 22
+}
+
+STRING 480
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 23
+}
+
+STRING 481
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 24
+}
+
+STRING 482
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 25
+}
+
+STRING 483
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 26
+}
+
+STRING 484
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 27
+}
+
+STRING 485
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 28
+}
+
+STRING 486
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 29
+}
+
+STRING 487
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 30
+}
+
+STRING 488
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 31
+}
+
+STRING 489
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 32
+}
+
+STRING 490
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 33
+}
+
+STRING 491
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 34
+}
+
+STRING 492
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 35
+}
+
+STRING 493
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 36
+}
+
+STRING 494
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 37
+}
+
+STRING 495
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 38
+}
+
+STRING 496
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 39
+}
+
+STRING 497
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 40
+}
+
+STRING 498
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 41
+}
+
+STRING 499
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 42
+}
+
+STRING 500
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 43
+}
+
+STRING 501
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 44
+}
+
+STRING 502
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 45
+}
+
+STRING 503
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 46
+}
+
+STRING 504
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 47
+}
+
+STRING 505
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 48
+}
+
+STRING 506
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 49
+}
+
+STRING 507
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 50
+}
+
+STRING 508
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 51
+}
+
+STRING 509
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 52
+}
+
+STRING 510
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 53
+}
+
+STRING 511
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 54
+}
+
+STRING 512
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 55
+}
+
+STRING 513
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 56
+}
+
+STRING 514
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 57
+}
+
+STRING 515
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 58
+}
+
+STRING 516
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 59
+}
+
+STRING 517
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 60
+}
+
+STRING 518
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 61
+}
+
+STRING 519
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 62
+}
+
+STRING 520
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 63
+}
+
+STRING 521
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 64
+}
+
+STRING 522
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 65
+}
+
+STRING 523
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 66
+}
+
+STRING 524
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 67
+}
+
+STRING 525
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 68
+}
+
+STRING 526
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 69
+}
+
+STRING 527
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 70
+}
+
+STRING 528
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 71
+}
+
+STRING 529
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 72
+}
+
+STRING 530
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 73
+}
+
+STRING 531
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 74
+}
+
+STRING 532
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 75
+}
+
+STRING 533
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 76
+}
+
+STRING 534
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 77
+}
+
+STRING 535
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 78
+}
+
+STRING 536
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 79
+}
+
+STRING 537
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 80
+}
+
+STRING 538
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 81
+}
+
+STRING 539
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 82
+}
+
+STRING 540
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 83
+}
+
+STRING 541
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 84
+}
+
+STRING 542
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 85
+}
+
+STRING 543
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 86
+}
+
+STRING 544
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 87
+}
+
+STRING 545
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 88
+}
+
+STRING 546
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 89
+}
+
+STRING 547
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 90
+}
+
+STRING 548
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 91
+}
+
+STRING 549
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 92
+}
+
+STRING 550
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 93
+}
+
+STRING 551
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 94
+}
+
+STRING 552
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 95
+}
+
+STRING 553
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 96
+}
+
+STRING 554
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 97
+}
+
+STRING 555
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 98
+}
+
+STRING 556
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 99
+}
+
+STRING 557
+// Upgrades: R000 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Hero Level 100
+}
+
+STRING 559
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Light
+}
+
+STRING 560
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Light
+}
+
+STRING 561
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Light
+}
+
+STRING 562
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 1|r]
+}
+
+STRING 563
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 2|r]
+}
+
+STRING 564
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Seal of |cffffcc00L|right - [|cffffcc00Level 3|r]
+}
+
+STRING 565
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA1,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 566
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA2,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 567
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heal for <A009,DataA3,%>% of your attack damage.|n|n|cffff00ffJudgment|r Heal for |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 570
+// Units: n002 (Skill Trainer), Name (Name)
+{
+Skill Trainer
+}
+
+STRING 571
+// Items: I004 (See Skills), Description (Description)
+{
+See Skills
+}
+
+STRING 572
+// Items: I004 (See Skills), Name (Name)
+{
+See Skills
+}
+
+STRING 573
+// Items: I004 (See Skills), Tip (Tooltip - Basic)
+{
+See Skills
+}
+
+STRING 574
+// Items: I004 (See Skills), Ubertip (Tooltip - Extended)
+{
+View skills being sold
+}
+
+STRING 575
+// Abilities: A030 (Shop Deselection Marker), Name (Name)
+{
+Shop Deselection Marker
+}
+
+STRING 578
+// Abilities: A00I (Devotion Aura), Tip (Tooltip - Normal)
+{
+Devotion A|cffffcc00u|rra - [|cffffcc00Level 1|r]
+}
+
+STRING 579
+// Abilities: A00I (Devotion Aura), Tip (Tooltip - Normal)
+{
+Devotion A|cffffcc00u|rra - [|cffffcc00Level 2|r]
+}
+
+STRING 580
+// Abilities: A00I (Devotion Aura), Tip (Tooltip - Normal)
+{
+Devotion A|cffffcc00u|rra - [|cffffcc00Level 3|r]
+}
+
+STRING 581
+// Abilities: A00I (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA2,%>% bonus armor to nearby allies.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 582
+// Abilities: A00I (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA3,%>% bonus armor to nearby allies.|n|n|cffffcc00Click to change aura|r
+}
+
+STRING 583
+// Abilities: A00J (Devotion Aura), Tip (Tooltip - Normal)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 584
+// Abilities: A00J (Devotion Aura), Tip (Tooltip - Normal)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 585
+// Abilities: A00J (Devotion Aura), Tip (Tooltip - Normal)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 586
+// Abilities: A00J (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA2,%>% bonus armor to nearby allies.
+}
+
+STRING 587
+// Abilities: A00J (Devotion Aura), Ubertip (Tooltip - Normal - Extended)
+{
+Grants <A00L,DataA3,%>% bonus armor to nearby allies.
+}
+
+STRING 588
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 589
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 590
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Devotion Aura
+}
+
+STRING 591
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 1|r]
+}
+
+STRING 592
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 2|r]
+}
+
+STRING 593
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+|cffffcc00D|revotion Aura - [|cffffcc00Level 3|r]
+}
+
+STRING 594
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Grants <A00L,DataA1,%>% bonus armor to nearby allies.
+}
+
+STRING 595
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Grants <A00L,DataA2,%>% bonus armor to nearby allies.
+}
+
+STRING 596
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Grants <A00L,DataA3,%>% bonus armor to nearby allies.
+}
+
+STRING 597
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 1|r]
+}
+
+STRING 598
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff006x Str|r health and deals |cff00ff002x Str|r damage to nearby enemies, or deals |cff00ff004x Str|r damage to an enemy and heals nearby allies for |cff00ff003x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool1> seconds
+}
+
+STRING 599
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 2|r]
+}
+
+STRING 600
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 3|r]
+}
+
+STRING 601
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 4|r]
+}
+
+STRING 602
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 5|r]
+}
+
+STRING 603
+// Abilities: A000 (Holy Light), Tip (Tooltip - Normal)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 6|r]
+}
+
+STRING 604
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff007x Str|r health and deals |cff00ff002.5x Str|r damage to nearby enemies, or deals |cff00ff005x Str|r damage to an enemy and heals nearby allies for |cff00ff003.5x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool2> seconds
+}
+
+STRING 605
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff008x Str|r health and deals |cff00ff003x Str|r damage to nearby enemies, or deals |cff00ff006x Str|r damage to an enemy and heals nearby allies for |cff00ff004x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool3> seconds
+}
+
+STRING 606
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff009x Str|r health and deals |cff00ff003.5x Str|r damage to nearby enemies, or deals |cff00ff007x Str|r damage to an enemy and heals nearby allies for |cff00ff004.5x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool4> seconds
+}
+
+STRING 607
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff0010x Str|r health and deals |cff00ff004x Str|r damage to nearby enemies, or deals |cff00ff008x Str|r damage to an enemy and heals nearby allies for |cff00ff005x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool5> seconds
+}
+
+STRING 608
+// Abilities: A000 (Holy Light), Ubertip (Tooltip - Normal - Extended)
+{
+Heals a friendly target for |cff00ff008x Str|r health and deals |cff00ff003x Str|r damage to nearby enemies, or deals |cff00ff006x Str|r damage to an enemy and heals nearby allies for |cff00ff004x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool6> seconds
+}
+
+STRING 609
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 610
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 611
+// Upgrades: R001 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+L
+}
+
+STRING 612
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 613
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 614
+// Upgrades: R002 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+D
+}
+
+STRING 615
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 616
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 617
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 618
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 619
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 620
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 621
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 1|r]
+}
+
+STRING 622
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 2|r]
+}
+
+STRING 623
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 3|r]
+}
+
+STRING 624
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff006x Str|r health and deals |cff00ff002x Str|r damage to nearby enemies, or deals |cff00ff004x Str|r damage to an enemy and heals nearby allies for |cff00ff003x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool1> seconds
+}
+
+STRING 625
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff007x Str|r health and deals |cff00ff002.5x Str|r damage to nearby enemies, or deals |cff00ff005x Str|r damage to an enemy and heals nearby allies for |cff00ff003.5x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool2> seconds
+}
+
+STRING 626
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff008x Str|r health and deals |cff00ff003x Str|r damage to nearby enemies, or deals |cff00ff006x Str|r damage to an enemy and heals nearby allies for |cff00ff004x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool3> seconds
+}
+
+STRING 627
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 628
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 629
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 630
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 631
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 4|r]
+}
+
+STRING 632
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 5|r]
+}
+
+STRING 633
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff009x Str|r health and deals |cff00ff003.5x Str|r damage to nearby enemies, or deals |cff00ff007x Str|r damage to an enemy and heals nearby allies for |cff00ff004.5x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool4> seconds
+}
+
+STRING 634
+// Upgrades: R003 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff0010x Str|r health and deals |cff00ff004x Str|r damage to nearby enemies, or deals |cff00ff008x Str|r damage to an enemy and heals nearby allies for |cff00ff005x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool5> seconds
+}
+
+STRING 635
+// Units: n002 (Skill Trainer), EditorSuffix (Name - Editor Suffix)
+{
+ (Paladin)
+}
+
+STRING 636
+// Units: n001 (Skill Trainer), Name (Name)
+{
+Skill Trainer
+}
+
+STRING 637
+// Abilities: A002 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 1|r]
+}
+
+STRING 638
+// Abilities: A002 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff000.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 639
+// Abilities: A002 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 2|r]
+}
+
+STRING 640
+// Abilities: A002 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 3|r]
+}
+
+STRING 641
+// Abilities: A002 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 642
+// Abilities: A002 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 643
+// Abilities: A003 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 1|r]
+}
+
+STRING 644
+// Abilities: A003 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff000.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 645
+// Abilities: A003 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 2|r]
+}
+
+STRING 646
+// Abilities: A003 (Seal of Righteousness), Tip (Tooltip - Normal)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 3|r]
+}
+
+STRING 647
+// Abilities: A003 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 648
+// Abilities: A003 (Seal of Righteousness), Ubertip (Tooltip - Normal - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 649
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 650
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 651
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+R
+}
+
+STRING 652
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 653
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 654
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Seal of Righteousness
+}
+
+STRING 655
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 1|r]
+}
+
+STRING 656
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 2|r]
+}
+
+STRING 657
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Sea|cffffcc00l|r of Righteousness - [|cffffcc00Level 3|r]
+}
+
+STRING 658
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff000.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff002x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 659
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff003x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 660
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Causes your attacks to deal bonus damage equal to |cff00ff001.5x Str|r|n|n|cffff00ffJudgment|r Deals bonus damage equal to |cff00ff004x Str|r|r|n|n|cffffcc00Click to change seal|r
+}
+
+STRING 661
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 662
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Holy Light
+}
+
+STRING 663
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 664
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+T
+}
+
+STRING 665
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 4|r]
+}
+
+STRING 666
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 5|r]
+}
+
+STRING 667
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff009x Str|r health and deals |cff00ff003.5x Str|r damage to nearby enemies, or deals |cff00ff007x Str|r damage to an enemy and heals nearby allies for |cff00ff004.5x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool4> seconds
+}
+
+STRING 668
+// Upgrades: R004 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff0010x Str|r health and deals |cff00ff004x Str|r damage to nearby enemies, or deals |cff00ff008x Str|r damage to an enemy and heals nearby allies for |cff00ff005x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool5> seconds
+}
+
+STRING 669
+// Abilities: A00H (Judgment), Ubertip (Tooltip - Normal - Extended)
+{
+Judges the target, dealing |cff00ff002x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool1> seconds
+}
+
+STRING 670
+// Abilities: A00H (Judgment), Tip (Tooltip - Normal)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 1|r]
+}
+
+STRING 671
+// Abilities: A00H (Judgment), Tip (Tooltip - Normal)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 2|r]
+}
+
+STRING 672
+// Abilities: A00H (Judgment), Tip (Tooltip - Normal)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 3|r]
+}
+
+STRING 673
+// Abilities: A00H (Judgment), Tip (Tooltip - Normal)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 4|r]
+}
+
+STRING 674
+// Abilities: A00H (Judgment), Ubertip (Tooltip - Normal - Extended)
+{
+Judges the target, dealing |cff00ff003x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool2> seconds
+}
+
+STRING 675
+// Abilities: A00H (Judgment), Ubertip (Tooltip - Normal - Extended)
+{
+Judges the target, dealing |cff00ff004x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool3> seconds
+}
+
+STRING 676
+// Abilities: A00H (Judgment), Ubertip (Tooltip - Normal - Extended)
+{
+Judges the target, dealing |cff00ff005x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool4> seconds
+}
+
+STRING 677
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 678
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 679
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 680
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Judgment
+}
+
+STRING 681
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Judgment
+}
+
+STRING 682
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Judgment
+}
+
+STRING 683
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 1|r]
+}
+
+STRING 684
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 2|r]
+}
+
+STRING 685
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 3|r]
+}
+
+STRING 686
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Judges the target, dealing |cff00ff002x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool1> seconds
+}
+
+STRING 687
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Judges the target, dealing |cff00ff003x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool2> seconds
+}
+
+STRING 688
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Judges the target, dealing |cff00ff004x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool3> seconds
+}
+
+STRING 689
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Judgment
+}
+
+STRING 690
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Name (Name)
+{
+Judgment
+}
+
+STRING 691
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 692
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Hotkey (Hotkey)
+{
+E
+}
+
+STRING 693
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Judgm|cffffcc00e|rnt - [|cffffcc00Level 4|r]
+}
+
+STRING 694
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Tip (Tooltip)
+{
+Holy Ligh|cffffcc00t|r - [|cffffcc00Level 5|r]
+}
+
+STRING 695
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Judges the target, dealing |cff00ff005x Str|r damage. Gains a bonus effect based on the currently active seal.|n|n|cff00ffffCooldown|r <A00H,Cool4> seconds
+}
+
+STRING 696
+// Upgrades: R005 (Iron Forged Swords,Steel Forged Swords,Mithril Forged Swords), Ubertip (Tooltip - Extended)
+{
+Heals a friendly target for |cff00ff0010x Str|r health and deals |cff00ff004x Str|r damage to nearby enemies, or deals |cff00ff008x Str|r damage to an enemy and heals nearby allies for |cff00ff005x Str|r health.|n|n|cff00ffffCooldown|r <A000,Cool5> seconds
+}
+
