@@ -110,6 +110,7 @@ function CreateRegions()
     gg_rct_HeroSpawn = Rect(-14304.0, -15424.0, -14208.0, -15328.0)
 end
 
+--Start custom code
 
 local ____modules = {}
 local ____moduleCache = {}
@@ -2218,6 +2219,7 @@ end
 return ____exports
 end,
 }
+--End custom code
 function Trig_Game_Timer_Actions()
     udg_ElapsedSeconds = (udg_ElapsedSeconds + 1)
 end
@@ -2300,4 +2302,11 @@ function config()
     SetPlayerSlotAvailable(Player(0), MAP_CONTROL_USER)
     InitGenericPlayerSlots()
 end
+
+
+
+
+
+
+
 
