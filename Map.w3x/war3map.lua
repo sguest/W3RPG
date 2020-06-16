@@ -618,7 +618,7 @@ function ____exports.SetStatMod(target, statName, delta)
         useNegativeMod = true
     end
     while index <= maxValue do
-        if (currentValue ) == 1 then
+        if (currentValue % 2) == 1 then
             UnitAddAbility(
                 target,
                 LoadInteger(udg_StatModTable, statHash, index)
