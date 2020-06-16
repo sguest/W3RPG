@@ -1,0 +1,1 @@
+declare function FourCC(code: string): number

@@ -4,6 +4,9 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "build": "node build.js src/main.jass out.jass"
+    "build": "tstl -p tsconfig.json && node build.js"
+  },
+  "dependencies": {
+    "typescript-to-lua": "^0.34.0"
   }
 }

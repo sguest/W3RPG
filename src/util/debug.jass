@@ -1,4 +1,0 @@
-function Debug takes string message returns nothing
-    local force players = GetPlayersAll()
-    call DisplayTextToForce(players, message)
-endfunction
